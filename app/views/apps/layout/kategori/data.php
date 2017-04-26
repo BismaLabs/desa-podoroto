@@ -16,7 +16,7 @@
                 <?php echo $this->session->flashdata('notif') ?>
                 <div class="box box-success">
                     <div class="box-header with-border">
-                        <h3 class="box-title"><i class="fa fa-folder"></i> Data Kategori</h3>
+                        <h3 class="box-title"><i class="fa fa-folder"></i> Kategori Berita</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">

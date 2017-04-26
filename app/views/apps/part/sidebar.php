@@ -27,13 +27,12 @@
         <ul class="sidebar-menu">
             <li class="header">MAIN MENU</li>
             <li <?php if(isset($dashboard)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/dashboard/"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
-            <li <?php if(isset($kategori)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/berita/"><i class="fa fa-book"></i> <span>Berita</span></a></li>
+            <li <?php if(isset($berita)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/berita/"><i class="fa fa-book"></i> <span>Berita</span></a></li>
             <li <?php if(isset($kategori)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/kategori/"><i class="fa fa-folder"></i> <span>Kategori Berita</span></a></li>
             <li <?php if(isset($warga)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/profil/"><i class="fa fa-info-circle"></i> <span>Profil Desa</span></a></li>
             <li <?php if(isset($buku)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/pelayanan/"><i class="fa fa-bell"></i> <span>Pelayanan Desa</span></a></li>
             <li <?php if(isset($peminjam)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/peminjam/"><i class="fa fa-shopping-cart"></i> <span>Produk Desa</span></a></li>
             <li <?php if(isset($laporan)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/laporan/"><i class="fa fa-picture-o"></i> <span>Galeri Foto</span></a></li>
-            <li class="header">MAIN SYSTEM</li>
             <li <?php if(isset($users)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/users/"><i class="fa fa-user-circle-o"></i> <span>Users</span></a></li>
             <li class="header">MAIN SETTING</li>
             <li <?php if(isset($settings)) { echo 'class="active treeview"'; } ?>>

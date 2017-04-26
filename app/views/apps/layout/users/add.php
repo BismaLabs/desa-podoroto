@@ -15,7 +15,7 @@
             <div class="col-md-12">
                 <div class="box box-success">
                     <div class="box-header with-border">
-                        <h3 class="box-title"><i class="fa fa-user-circle-o"></i> Add Users</h3>
+                        <h3 class="box-title"><i class="fa fa-user-circle-o"></i> Tambah Users</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">

@@ -111,7 +111,7 @@ class Users extends CI_Controller
         if ($this->apps->apps_id()) {
             //create data array
             $data = array(
-                'title' => 'Add Users',
+                'title' => 'Tambah Users',
                 'users' => TRUE,
                 'type' => 'add',
                 'thumbnail' => 'userfile'
