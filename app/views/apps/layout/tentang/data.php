@@ -27,8 +27,7 @@
                             <b><span style="font-size: 16px">CV. Bisma Labs - Professional Web Apps Solutions</span></b>
                         </p>
                         <p>
-                            Kami menghadirkan sebuah aplikasi yang kita namakan Perpus Desa, dimana dengan
-                            aplikasi ini apapun kegiatan pengelolaan perpustakaan desa akan termudahkan, memonitor kondisi buku-buku di perpus, serta mengenalkan ke masyarakat luas bahwa untuk meminjam buku di perpustakaan desa Anda sekarang sangatlah mudah karena Aplikasi ini.
+                            Kami menghadirkan layanan pembuatan Website khusus untuk Desa, dimana dengan Website ini desa Anda akan termudahkan dalam menyebarkan informasi-informasi, memonitor kondisi desa, serta tidak menutup kemungkinan desa Anda akan dikenal oleh masyarakat luas secara nasional bahkan global.
                         </p>
                         <p>
                             <b><span style="font-size: 16px">jika punya pertanyaan bisa hubungi kami melalui :</span></b>

@@ -21,7 +21,7 @@ class Kategori extends CI_Controller
         if ($this->apps->apps_id()) {
             //config pagination
             $config['base_url'] = base_url() . 'apps/kategori/index/';
-            $config['total_rows'] = $this->apps->count_users()->num_rows();
+            $config['total_rows'] = $this->apps->count_produk()->num_rows();
             $config['per_page'] = 10;
             //instalasi paging
             $this->pagination->initialize($config);

@@ -31,8 +31,9 @@
             <li <?php if(isset($kategori)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/kategori/"><i class="fa fa-folder"></i> <span>Kategori Berita</span></a></li>
             <li <?php if(isset($warga)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/profil/"><i class="fa fa-info-circle"></i> <span>Profil Desa</span></a></li>
             <li <?php if(isset($buku)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/pelayanan/"><i class="fa fa-bell"></i> <span>Pelayanan Desa</span></a></li>
-            <li <?php if(isset($peminjam)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/peminjam/"><i class="fa fa-shopping-cart"></i> <span>Produk Desa</span></a></li>
-            <li <?php if(isset($laporan)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/laporan/"><i class="fa fa-picture-o"></i> <span>Galeri Foto</span></a></li>
+            <li <?php if(isset($produk)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/produk/"><i class="fa fa-shopping-cart"></i> <span>Produk Desa</span></a></li>
+            <li <?php if(isset($galeri)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/galeri/"><i class="fa fa-picture-o"></i> <span>Galeri Foto</span></a></li>
+            <li <?php if(isset($staff)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/staff/"><i class="fa fa-male"></i> <span>Staff Desa</span></a></li>
             <li <?php if(isset($users)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/users/"><i class="fa fa-user-circle-o"></i> <span>Users</span></a></li>
             <li class="header">MAIN SETTING</li>
             <li <?php if(isset($settings)) { echo 'class="active treeview"'; } ?>>

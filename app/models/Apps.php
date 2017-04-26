@@ -244,6 +244,123 @@ class Apps extends CI_Model{
                         return $this->db->get_where('tbl_kategori', $id_kategori);
                     }
 
+                    /* fungsi produk */
+                    function count_produk()
+                    {
+                        return $this->db->get('tbl_produk');
+                    }
+
+                    function index_produk($halaman,$batas)
+                    {
+                        $query = "SELECT * FROM tbl_produk as a JOIN tbl_users as b ON a.user_id = b.id_user  ORDER BY a.id_produk DESC limit $halaman, $batas";
+                        return $this->db->query($query);
+                    }
+
+                    function search_produk_json()
+                    {
+                        $query = $this->db->get('tbl_produk');
+                        return $query->result();
+                    }
+
+                    function total_search_produk($keyword)
+                    {
+                        $query = $this->db->like('judul_produk',$keyword)->get('tbl_produk');
+
+                        if($query->num_rows() > 0)
+                        {
+                            return $query->num_rows();
+                        }
+                        else
+                        {
+                            return NULL;
+                        }
+                    }
+
+                    public function search_index_produk($keyword,$limit,$offset)
+                    {
+                        $query = $this->db->select('*')
+                            ->from('tbl_kategori a')
+                            ->join('tbl_users b', 'a.user_id = b.id_user')
+                            ->limit($limit,$offset)
+                            ->like('a.judul_produk',$keyword)
+                            ->limit($limit,$offset)
+                            ->order_by('a.id_produk','DESC')
+                            ->get();
+
+                        if($query->num_rows() > 0)
+                        {
+                            return $query;
+                        }
+                        else
+                        {
+                            return NULL;
+                        }
+                    }
+
+                    function edit_produk($id_produk)
+                    {
+                        $id_produk  =  array('id_produk'=> $id_produk);
+                        return $this->db->get_where('tbl_produk', $id_produk);
+                    }
+
+                                /* fungsi staff */
+                                function count_staff()
+                                {
+                                    return $this->db->get('tbl_staff');
+                                }
+
+                                function index_staff($halaman,$batas)
+                                {
+                                    $query = "SELECT * FROM tbl_staff  ORDER BY id_staff DESC limit $halaman, $batas";
+                                    return $this->db->query($query);
+                                }
+
+                                function search_staff_json()
+                                {
+                                    $query = $this->db->get('tbl_staff');
+                                    return $query->result();
+                                }
+
+                                function total_search_staff($keyword)
+                                {
+                                    $query = $this->db->like('nama',$keyword)->get('tbl_staff');
+
+                                    if($query->num_rows() > 0)
+                                    {
+                                        return $query->num_rows();
+                                    }
+                                    else
+                                    {
+                                        return NULL;
+                                    }
+                                }
+
+                                public function search_index_staff($keyword,$limit,$offset)
+                                {
+                                    $query = $this->db->select('*')
+                                        ->from('tbl_staff')
+                                        ->limit($limit,$offset)
+                                        ->like('nama',$keyword)
+                                        ->limit($limit,$offset)
+                                        ->order_by('id_staff','DESC')
+                                        ->get();
+
+                                    if($query->num_rows() > 0)
+                                    {
+                                        return $query;
+                                    }
+                                    else
+                                    {
+                                        return NULL;
+                                    }
+                                }
+
+                                function edit_staff($id_staff)
+                                {
+                                    $id_staff  =  array('id_staff'=> $id_staff);
+                                    return $this->db->get_where('tbl_staff', $id_staff);
+                                }
+
             //fungsi date time
                 function tgl_time_indo($date=null){
                     $tglindo = date("d-m-Y H:i:s", strtotime($date));
