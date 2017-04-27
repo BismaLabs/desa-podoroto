@@ -57,7 +57,7 @@
                                 <textarea class="form-control" id="post" name="alamat" rows="3" placeholder="Masukkan Alamat Rumah"><?php echo $data_staff['alamat'] ?></textarea>
                             </div>
                             <div class="submit" style="margin-bottom: 7px">
-                                <button type="submit" class="btn  bg-olive btn-flat btn-save btn-fill"><i class="fa fa-save"></i> Simpan</button>
+                                <button type="submit" class="btn  bg-olive btn-flat btn-save btn-fill"><i class="fa fa-save"></i> Update</button>
                                 <button type="reset" class="btn bg-orange btn-flat btn-fill"><i class="fa fa-repeat"></i> Reset</button>
                             </div>
                             <?php echo form_close(); ?>

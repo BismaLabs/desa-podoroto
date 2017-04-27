@@ -361,6 +361,73 @@ class Apps extends CI_Model{
                                     return $this->db->get_where('tbl_staff', $id_staff);
                                 }
 
+                            /* fungsi berita */
+                            function count_berita()
+                            {
+                                return $this->db->get('tbl_berita');
+                            }
+
+                            function index_berita($halaman,$batas)
+                            {
+                                $query = "SELECT a.id_berita, a.judul_berita, a.slug, a.user_id, a.kategori_id, a.created_at, a.updated_at, b.id_user, b.nama_user, c.id_kategori, c.nama_kategori FROM tbl_berita as a JOIN tbl_users as b JOIN tbl_kategori as c ON a.user_id = b.id_user AND a.kategori_id = c.id_kategori ORDER BY a.id_berita DESC limit $halaman, $batas";
+                                return $this->db->query($query);
+                            }
+
+                            function search_berita_json()
+                            {
+                                $query = $this->db->get('tbl_berita');
+                                return $query->result();
+                            }
+
+                            function total_search_berita($keyword)
+                            {
+                                $query = $this->db->like('judul_berita',$keyword)->get('tbl_berita');
+
+                                if($query->num_rows() > 0)
+                                {
+                                    return $query->num_rows();
+                                }
+                                else
+                                {
+                                    return NULL;
+                                }
+                            }
+
+                            public function search_index_berita($keyword,$limit,$offset)
+                            {
+                                $query = $this->db->select('a.id_berita, a.judul_berita, a.slug, a.user_id, a.kategori_id, a.created_at, a.updated_at, b.id_user, b.nama_user, c.id_kategori, c.nama_kategori')
+                                    ->from('tbl_berita a')
+                                    ->join('tbl_users b', 'a.user_id = b.id_user')
+                                    ->join('tbl_kategori c', 'a.kategori_id = c.id_kategori')
+                                    ->limit($limit,$offset)
+                                    ->like('a.judul_berita',$keyword)
+                                    ->limit($limit,$offset)
+                                    ->order_by('a.id_berita','DESC')
+                                    ->get();
+
+                                if($query->num_rows() > 0)
+                                {
+                                    return $query;
+                                }
+                                else
+                                {
+                                    return NULL;
+                                }
+                            }
+
+                            function edit_berita($id_berita)
+                            {
+                                $id_berita  =  array('id_berita'=> $id_berita);
+                                return $this->db->get_where('tbl_berita', $id_berita);
+                            }
+
+                            function select_kategori()
+                            {
+                                $this->db->order_by('nama_kategori ASC');
+                                return $this->db->get('tbl_kategori');
+                            }
+
+
             //fungsi date time
                 function tgl_time_indo($date=null){
                     $tglindo = date("d-m-Y H:i:s", strtotime($date));
