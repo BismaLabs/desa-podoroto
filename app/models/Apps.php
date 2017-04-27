@@ -428,6 +428,115 @@ class Apps extends CI_Model{
                             }
 
 
+       // fungsi profil
+        function count_profil()
+        {
+            return $this->db->where('kategori', 'profil')->get('tbl_pages');
+        }
+
+        function index_profil($halaman,$batas)
+        {
+            $query = "SELECT * FROM tbl_pages as a JOIN tbl_users as b ON a.user_id = b.id_user WHERE a.kategori = 'profil'  ORDER BY judul_page ASC limit $halaman, $batas";
+            return $this->db->query($query);
+        }
+
+        function edit_profil($id_page)
+        {
+            $id_page  =  array('id_page'=> $id_page);
+            return $this->db->get_where('tbl_pages',$id_page);
+        }
+
+        function total_search_profil($keyword)
+        {
+            $query = $this->db->like('judul_page',$keyword)->where('kategori', 'profil')->get('tbl_pages');
+
+            if($query->num_rows() > 0)
+            {
+                return $query->num_rows();
+            }
+            else
+            {
+                return NULL;
+            }
+        }
+
+        public function search_index_profil($keyword,$limit,$offset)
+        {
+            $query = $this->db->select('*')
+                ->from('tbl_pages a')
+                ->join('tbl_users b','a.user_id = b.id_user')
+                ->where('kategori', 'profil')
+                ->limit($limit,$offset)
+                ->like('a.judul_page',$keyword)
+                ->limit($limit,$offset)
+                ->order_by('a.judul_page','ASC')
+                ->get();
+
+            if($query->num_rows() > 0)
+            {
+                return $query;
+            }
+            else
+            {
+                return NULL;
+            }
+        }
+
+       // fungsi layanan
+        function count_layanan()
+        {
+            return $this->db->where('kategori', 'layanan')->get('tbl_pages');
+        }
+
+        function index_layanan($halaman,$batas)
+        {
+            $query = "SELECT * FROM tbl_pages as a JOIN tbl_users as b ON a.user_id = b.id_user WHERE a.kategori = 'layanan'  ORDER BY judul_page ASC limit $halaman, $batas";
+            return $this->db->query($query);
+        }
+
+        function edit_layanan($id_page)
+        {
+            $id_page  =  array('id_page'=> $id_page);
+            return $this->db->get_where('tbl_pages',$id_page);
+        }
+
+        function total_search_layanan($keyword)
+        {
+            $query = $this->db->like('judul_page',$keyword)->where('kategori', 'layanan')->get('tbl_pages');
+
+            if($query->num_rows() > 0)
+            {
+                return $query->num_rows();
+            }
+            else
+            {
+                return NULL;
+            }
+        }
+
+        public function search_index_layanan($keyword,$limit,$offset)
+        {
+            $query = $this->db->select('*')
+                ->from('tbl_pages a')
+                ->join('tbl_users b','a.user_id = b.id_user')
+                ->where('kategori', 'layanan')
+                ->limit($limit,$offset)
+                ->like('a.judul_page',$keyword)
+                ->limit($limit,$offset)
+                ->order_by('a.judul_page','ASC')
+                ->get();
+
+            if($query->num_rows() > 0)
+            {
+                return $query;
+            }
+            else
+            {
+                return NULL;
+            }
+        }
+
+
             //fungsi date time
                 function tgl_time_indo($date=null){
                     $tglindo = date("d-m-Y H:i:s", strtotime($date));
