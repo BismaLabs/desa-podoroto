@@ -132,6 +132,7 @@ class Profil extends CI_Controller{
             $id['id_page'] = $this->encryption->decode($this->input->post("id_page"));
             $update = array(
                 'judul_page'    => $this->input->post("judul"),
+                'slug'          => url_title(strtolower($this->input->post("judul"))),
                 'isi_page'      => $this->input->post("isi_page"),
                 'user_id'       => $this->session->userdata("apps_id"),
                 'meta_keywords' => $this->input->post("meta_keywords"),

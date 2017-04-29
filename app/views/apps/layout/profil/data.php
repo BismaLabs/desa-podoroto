@@ -38,7 +38,7 @@
                                 <tr>
                                     <th class="text-center" style="color: #000;">No.</th>
                                     <th class="text-center" style="color: #000;"><i class="fa fa-bookmark"></i> JUDUL PAGES</th>
-                                    <th class="text-center" style="color: #000;"><i class="fa fa-user-circle-o"></i> AUTHOR</th>
+                                    <th class="text-center" style="color: #000;"><i class="fa fa-user-circle-o"></i> PENULIS</th>
                                     <th class="text-center" style="color: #000;"><i class="fa fa-calendar-o"></i> UPDATED AT</th>
                                     <th class="text-center" style="color: #000;"><i class="fa fa-cogs"></i> OPTIONS</th>
                                 </tr>
