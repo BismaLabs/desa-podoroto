@@ -17,8 +17,29 @@ class Web extends CI_Model
     function get_berita_terbaru()
     {
         $this->db->order_by('id_berita DESC');
-        //$this->db->limit('0', '12');
+        $this->db->limit(8, 0);
         return $this->db->get('tbl_berita');
+    }
+
+    function get_produk_terbaru()
+    {
+        $this->db->order_by('id_produk DESC');
+        $this->db->limit(8, 0);
+        return $this->db->get('tbl_produk');
+    }
+
+    //get berita
+    function get_berita($page){
+        //offset
+        $offset = 12 * $page;
+        //limit
+        $limit  = 12;
+        //query
+        $query  = "SELECT * FROM tbl_berita ORDER BY id_berita DESC limit $offset ,$limit";
+        //get result
+        $result = $this->db->query($query)->result();
+        //callback return
+        return $result;
     }
 
     function detail_pages($url)
