@@ -19,7 +19,7 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <div class="add-user">
+                        <div class="add">
                             <?php
                             $attributes = array('id' => 'frm_login');
                             echo form_open_multipart('apps/produk/save?source=header&utf8=✓', $attributes)

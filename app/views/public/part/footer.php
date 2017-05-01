@@ -128,9 +128,10 @@
 <script src="<?php echo base_url() ?>resources/public/js/main.js"></script>
 <script src="<?php echo base_url() ?>resources/public/js/jquery.simpleWeather.js"></script>
 <script src="<?php echo base_url() ?>resources/public/js/moment.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url() ?>resources/public/js/fancybox2/jquery.fancybox.js"></script>
-<script type="text/javascript" src="<?php echo base_url() ?>resources/public/js/fancybox2/jquery.fancybox-thumbs.js"></script>
+<script src="<?php echo base_url() ?>resources/public/js/fancybox2/jquery.fancybox.js"></script>
+<script src="<?php echo base_url() ?>resources/public/js/fancybox2/jquery.fancybox-thumbs.js"></script>
 <script src="<?php echo base_url() ?>resources/public/parts/js/global.js"></script>
 <script src="<?php echo base_url() ?>resources/public/js/weather.js" type="text/javascript"></script>
+<script src="<?php echo base_url() ?>resources/public/js/app.js" type="text/javascript"></script>
 </body>
 </html>
