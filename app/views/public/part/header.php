@@ -43,7 +43,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <div class="logo navbar-brand">
-                        <a href="<?php echo base_url() ?>"><img src="<?php echo base_url()?>resources/public/images/perpus-logo.png" title="Perpustakaan Desa Podoroto">
+                        <a href="<?php echo base_url() ?>"><img src="<?php echo base_url()?>resources/images/logo.png" title="Perpustakaan Desa Podoroto">
                         </a>
                     </div>
                     <nav id="primary-navigation" class="site-navigation navbar-collapse collapse" role="navigation">
