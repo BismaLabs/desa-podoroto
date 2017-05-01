@@ -7,14 +7,13 @@
             <small>Web Applications</small>
         </h1>
     </section>
-
     <!-- Main content -->
     <div class="content">
         <div class="row">
             <div class="col-md-12">
                 <div class="box box-success">
                     <div class="box-header with-border">
-                        <h3 class="box-title"><i class="fa fa-book"></i> Edit Berita</h3>
+                        <h3 class="box-title"><i class="fa fa-book"></i> Tambah Berita</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -72,7 +71,7 @@
                                 <textarea class="form-control" id="post" name="descriptions" rows="3" placeholder="Masukkan Deskripsi Singkat Berita"></textarea>
                             </div>
                             <div class="submit" style="margin-bottom: 7px">
-                                <button type="submit" class="btn  bg-olive btn-flat btn-save btn-fill"><i class="fa fa-save"></i> Update</button>
+                                <button type="submit" class="btn  bg-olive btn-flat btn-save btn-fill"><i class="fa fa-save"></i> Tambah</button>
                                 <button type="reset" class="btn bg-orange btn-flat btn-fill"><i class="fa fa-repeat"></i> Reset</button>
                             </div>
                             <?php echo form_close(); ?>
