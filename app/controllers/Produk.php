@@ -28,4 +28,5 @@ class Produk extends CI_Controller
         $this->load->view('public/layout/produk/data');
         $this->load->view('public/part/footer');
     }
+
 }

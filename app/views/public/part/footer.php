@@ -1,4 +1,4 @@
-<footer id="footer-section" class="site-footer">
+<footer id="footer-section" class="site-footer" style="margin-top: 50px">
     <div class="container">
         <div class="row">
             <div class="col-md-4">

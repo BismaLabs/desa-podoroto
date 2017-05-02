@@ -56,6 +56,20 @@ class Web extends CI_Model
         return $result;
     }
 
+    //get detail berita
+    function detail_berita($url)
+    {
+        $query = $this->db->query("SELECT a.id_berita, a.user_id, a.judul_berita, a.slug, a.isi_berita, a.gambar, a.views, a.keywords, a.descriptions, a.created_at, b.id_user, b.nama_user FROM tbl_berita as a JOIN tbl_users as b ON a.user_id = b.id_user WHERE a.slug = '$url'");
+
+        if($query->num_rows() > 0)
+        {
+            return $query->row();
+        }else
+        {
+            return NULL;
+        }
+    }
+
 
     function detail_pages($url)
     {
