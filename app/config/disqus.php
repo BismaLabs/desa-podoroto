@@ -13,7 +13,7 @@
 | Usage: Specify your forum shortname as string.
 |
 */
-$config['disqus_shortname'] = 'medical-top-team';
+$config['disqus_shortname'] = 'desa-podoroto';
 
 /*
 |--------------------------------------------------------------------------

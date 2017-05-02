@@ -29,7 +29,7 @@
                                         $tags = explode(",", $detail_berita->keywords);
                                         foreach($tags as $k => $v):
                                             ?>
-                                            <button class="btn btn-sm btn-default"><i class="fa fa-tags"></i> <?php echo $v ?></button>
+                                            <button class="btn btn-sm btn-default" style="border-radius: 25px;font-weight: 300;text-transform: none"><i class="fa fa-tags"></i> <?php echo $v ?></button>
                                             <?php
                                         endforeach;
                                     endif;
