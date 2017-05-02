@@ -42,6 +42,21 @@ class Web extends CI_Model
         return $result;
     }
 
+    //get berita
+    function get_produk($page){
+        //offset
+        $offset = 12 * $page;
+        //limit
+        $limit  = 12;
+        //query
+        $query  = "SELECT * FROM tbl_produk ORDER BY id_produk DESC limit $offset ,$limit";
+        //get result
+        $result = $this->db->query($query)->result();
+        //callback return
+        return $result;
+    }
+
+
     function detail_pages($url)
     {
         $query = $this->db->query("SELECT * FROM tbl_pages WHERE slug = '$url'");
