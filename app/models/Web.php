@@ -70,6 +70,20 @@ class Web extends CI_Model
         }
     }
 
+    //get detail produk
+    function detail_produk($url)
+    {
+        $query = $this->db->query("SELECT a.id_produk, a.user_id, a.judul_produk, a.slug, a.isi_produk, a.gambar, a.views, a.keywords, a.descriptions, a.created_at, b.id_user, b.nama_user FROM tbl_produk as a JOIN tbl_users as b ON a.user_id = b.id_user WHERE a.slug = '$url'");
+
+        if($query->num_rows() > 0)
+        {
+            return $query->row();
+        }else
+        {
+            return NULL;
+        }
+    }
+
 
     function detail_pages($url)
     {

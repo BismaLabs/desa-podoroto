@@ -42,6 +42,7 @@
                     </div><!-- end service page -->
 
                 </div><!-- end #content -->
+                <hr>
                 <h1 class="entry-title">
                     Komentar
                 </h1>
