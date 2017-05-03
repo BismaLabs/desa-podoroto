@@ -28,6 +28,12 @@ class Web extends CI_Model
         return $this->db->get('tbl_produk');
     }
 
+    function get_sliders()
+    {
+        $this->db->order_by('id_slider DESC');
+        return $this->db->get('tbl_sliders');
+    }
+
     //get berita
     function get_berita($page){
         //offset

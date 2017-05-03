@@ -536,6 +536,13 @@ class Apps extends CI_Model{
             }
         }
 
+            // fungsi slider
+            function index_sliders()
+            {
+                $query = "SELECT * FROM tbl_sliders ORDER BY id_slider DESC";
+                return $this->db->query($query);
+            }
+
 
             //fungsi date time
                 function tgl_time_indo($date=null){

@@ -1,36 +1,18 @@
 <div class="featured-slider">
     <div class="flexslider">
         <ul class="slides">
-            <li style="background-image: url('<?php echo base_url() ?>resources/images/slider/1.jpg')">
-                <div class="flex-caption">
-                    <h2 class="animated fadeInRight"><span>Berpengalaman. Integritas. Berkualitas.</span></h2>
+            <?php
 
-                </div>
-            </li>
-            <li style="background-image: url('<?php echo base_url() ?>resources/images/slider/IMG_0028.jpg')">
-                <div class="flex-caption">
-                    <h2 class="animated fadeInRight"><span>Melayani Dengan Hati.</span></h2>
+            foreach($data_sliders->result() as $hasil){
 
-                </div>
-            </li>
-            <li style="background-image: url('<?php echo base_url() ?>resources/images/slider/IMG_9999.jpg')">
-                <div class="flex-caption">
-                    <h2 class="animated fadeInRight"><span>Transparansi Pemerintahan.</span></h2>
+            ?>
+                <li style="background-image: url('<?php echo base_url() ?>resources/images/sliders/<?php echo $hasil->images ?>')">
+                    <div class="flex-caption">
+                        <h2 class="animated fadeInRight"><span><?php echo $hasil->caption ?></span></h2>
 
-                </div>
-            </li>
-            <li style="background-image: url('<?php echo base_url() ?>resources/images/slider/IMG_9996.jpg')">
-                <div class="flex-caption">
-                    <h2 class="animated fadeInRight"><span>Saatnya Yang Muda Berkarya.</span></h2>
-
-                </div>
-            </li>
-            <li style="background-image: url('<?php echo base_url() ?>resources/images/slider/selamat%20datang%20psw.jpg')">
-                <div class="flex-caption">
-                    <h2 class="animated fadeInRight"><span>Tugu Selamat Datang Kabupaten Pringsewu</span></h2>
-
-                </div>
-            </li>
+                    </div>
+                </li>
+            <?php } ?>
         </ul>
     </div>
 
