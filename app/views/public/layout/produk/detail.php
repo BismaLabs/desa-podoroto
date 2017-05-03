@@ -66,6 +66,32 @@
                         </form>
                     </div><!-- end searchform -->
                 </div><!-- end search widget -->
+                <div class="widget post-type-widget">
+                    <div class="widget-title-outer">
+                        <h3 class="widget-title">Produk Terbaru</h3>
+                    </div>
+                    <ul>
+                        <?php if (produk_sidebar() != NULL) {
+                            foreach(produk_sidebar() as $hasil) {
+                                ?>
+                                <li>
+
+                            <span class="post-category">
+                               <i class="fa fa calendar"></i> <?php echo $this->apps->tgl_indo_no_hari($hasil->created_at) ?>
+                            </span>
+                                    <figure class="post-thumbnail">
+                                        <a href="<?php echo base_url() ?>produk/<?php echo $hasil->slug ?>/"><img src="<?php echo base_url() ?>resources/images/produk/thumb/<?php echo $hasil->gambar ?>" alt="" width="110px" height="80px" style="object-fit: cover;"></a>
+                                    </figure>
+                                    <h2 class="post-title">
+                                        <a href="<?php echo base_url() ?>produk/<?php echo $hasil->slug ?>/" style="text-decoration: none">
+                                            <?php echo $hasil->judul_produk ?></a>
+                                    </h2>
+
+                                </li>
+                            <?php }} ?>
+
+                    </ul>
+                </div><!-- end widget -->
             </div><!-- end #secondary -->
         </div><!-- end row -->
     </div><!-- end container -->
