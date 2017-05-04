@@ -243,3 +243,13 @@
   -ms-transform: rotate(336deg);
   transform: rotate(336deg);
 }
+
+.hover-app:hover{
+  -moz-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+  -moz-box-shadow: 0 8px 6px -6px #323232;
+  -webkit-box-shadow: 0 8px 6px -6px #323232;
+  box-shadow: 0 8px 6px -6px #323232;
+}

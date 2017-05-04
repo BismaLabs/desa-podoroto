@@ -58,27 +58,27 @@
             <div class="col-md-12 content-center">
                 <div class="col-partner">
                     <div>
-                        <a href="#" class="linkcls"><img src="<?php echo base_url() ?>resources/images/app/simdes.png"></a>
+                        <a href="#" class="linkcls"><img class="hover-app" style="padding:10px;max-width: 200px;-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);" src="<?php echo base_url() ?>resources/images/app/simdes.png"></a>
                     </div>
                 </div><!-- end column -->
                 <div class="col-partner">
                     <div>
-                        <a href="#" class="linkcls"><img src="<?php echo base_url() ?>resources/images/app/perpus.png" style="width :167px;"></a>
+                        <a href="#" class="linkcls"><img class="hover-app" style="padding:10px;max-width: 200px;-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);" src="<?php echo base_url() ?>resources/images/app/perpus.png" style="width :167px;"></a>
                     </div>
                 </div><!-- end column -->
                 <div class="col-partner">
                     <div>
-                        <a href="#" class="linkcls"><img src="<?php echo base_url() ?>resources/images/app/aduan.png"></a>
+                        <a href="#" class="linkcls"><img class="hover-app" style="padding:10px;max-width: 200px;-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);" src="<?php echo base_url() ?>resources/images/app/aduan.png"></a>
                     </div>
                 </div><!-- end column -->
                 <div class="col-partner">
                     <div>
-                        <a href="#" class="linkcls"><img src="<?php echo base_url() ?>resources/images/app/letter.png"></a>
+                        <a href="#" class="linkcls"><img class="hover-app" style="padding:10px;max-width: 200px;-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);" src="<?php echo base_url() ?>resources/images/app/letter.png"></a>
                     </div>
                 </div><!-- end column -->
                 <div class="col-partner">
                     <div>
-                        <a href="#" class="linkcls"><img src="<?php echo base_url() ?>resources/images/app/healty.png" style="width : 167px;"></a>
+                        <a href="#" class="linkcls"><img class="hover-app" style="padding:10px;max-width: 200px;-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);" src="<?php echo base_url() ?>resources/images/app/healty.png" style="width : 167px;"></a>
                     </div>
                 </div><!-- end column -->
             </div><!-- end inner -->
