@@ -20,7 +20,7 @@
                                              height="270px" alt="" style="object-fit: cover;">
                                     </figure>
                                     <div class="short-social"
-                                         style="background-color: #ffffff;-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);">
+                                         style="background-color: #ffffff;box-shadow: 1px 1px 2px 0 rgba(0,0,0,.1);">
                                         <ul>
                                             <li><a href="#"><i class="fa fa-fw fa-facebook"></i></a></li>
                                             <li><a href="#"><i class="fa fa-fw fa-twitter"></i></a></li>
@@ -31,7 +31,7 @@
                                 </div><!-- end onleft -->
 
                                 <div class="onright"
-                                     style="background-color: #ffffff;-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);padding: 10px">
+                                     style="background-color: #ffffff;box-shadow: 1px 1px 2px 0 rgba(0,0,0,.1);padding: 10px">
                                     <h3><?php echo $hasil->nama ?></h3>
                                     <span><?php echo $hasil->jabatan ?></span>
                                     <div class="profile-desc">
@@ -78,7 +78,7 @@
                                                  height="145px" alt="" style="object-fit: cover;">
                                         </figure>
                                         <div class="short-social"
-                                             style="background-color: #ffffff;-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);">
+                                             style="background-color: #ffffff;box-shadow: 1px 1px 2px 0 rgba(0,0,0,.1);">
                                             <ul>
                                                 <li><a href="#"><i class="fa fa-fw fa-facebook"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-fw fa-twitter"></i></a></li>
@@ -89,7 +89,7 @@
                                     </div><!-- end onleft -->
 
                                     <div class="onright"
-                                         style="background-color: #ffffff;-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);padding: 10px">
+                                         style="background-color: #ffffff;box-shadow: 1px 1px 2px 0 rgba(0,0,0,.1);;padding: 10px">
                                         <h3><?php echo $hasil->nama ?></h3>
                                         <span><?php echo $hasil->jabatan ?></span>
                                         <div class="profile-desc">
