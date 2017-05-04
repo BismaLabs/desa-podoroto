@@ -28,6 +28,19 @@ class Web extends CI_Model
         return $this->db->get('tbl_produk');
     }
 
+    function get_staff()
+    {
+        $this->db->order_by('id_staff ASC');
+        $this->db->where_not_in('jabatan', 'KEPALA DESA');
+        return $this->db->get('tbl_staff');
+    }
+
+    function get_kepala_desa()
+    {
+        $this->db->where('jabatan', 'KEPALA DESA');
+        return $this->db->get('tbl_staff');
+    }
+
     function get_sliders()
     {
         $this->db->order_by('id_slider DESC');
