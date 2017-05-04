@@ -58,7 +58,7 @@ class Home extends CI_Controller
                         <div class="entry-header">
                             <time class="published"  title="'.$this->apps->tgl_indo_lengkap($hasil->created_at).'" style="color: #4c4a45">
                                 '. $this->apps->tgl_indo_lengkap($hasil->created_at).'</time>
-                            <h6 class="post-title entry-title">
+                            <h6 class="post-title entry-title wrap-berita">
                                 '. $judul .'
                             </h6>
                         </div><!-- end entry-header -->
@@ -99,7 +99,7 @@ class Home extends CI_Controller
                         <div class="entry-header">
                             <time class="published"  title="'.$this->apps->tgl_indo_lengkap($hasil->created_at).'" style="color: #4c4a45">
                                 '. $this->apps->tgl_indo_lengkap($hasil->created_at).'</time>
-                            <h6 class="post-title entry-title">
+                            <h6 class="post-title entry-title wrap-berita">
                                 '. $judul .'
                             </h6>
                         </div><!-- end entry-header -->

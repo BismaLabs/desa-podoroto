@@ -27,9 +27,11 @@
                         <div class="entry-header">
                             <time class="published"  title="<?php echo $this->apps->tgl_indo_lengkap($hasil->created_at) ?>" style="color: #4c4a45">
                                 <?php echo $this->apps->tgl_indo_lengkap($hasil->created_at) ?></time>
-                            <h6 class="post-title entry-title">
+
+                            <h6 class="post-title entry-title wrap-berita">
                                 <?php echo $judul ?>
                             </h6>
+
                         </div><!-- end entry-header -->
                         <div class="entry-content">
                             <p class="wrap-berita" style="color: #333"><?php echo substr($hasil->descriptions, '0', '90') ?>.....</p>
