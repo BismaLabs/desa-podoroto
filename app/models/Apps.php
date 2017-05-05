@@ -544,6 +544,83 @@ class Apps extends CI_Model{
             }
 
 
+                // fungsi album
+                function count_album()
+                {
+                    return $this->db->get('tbl_album');
+                }
+
+                function index_album($halaman,$batas)
+                {
+                    $query = "SELECT id_album, nama_album FROM tbl_album ORDER BY id_album DESC limit $halaman, $batas";
+                    return $this->db->query($query);
+                }
+
+                function total_search_album($keyword)
+                {
+                    $query = $this->db->like('nama_album',$keyword)->get('tbl_album');
+
+                    if($query->num_rows() > 0)
+                    {
+                        return $query->num_rows();
+                    }
+                    else
+                    {
+                        return NULL;
+                    }
+                }
+
+                public function search_index_album($keyword,$limit,$offset)
+                {
+                    $query = $this->db->select('*')
+                        ->from('tbl_album')
+                        ->like('nama_album',$keyword)
+                        ->limit($limit,$offset)
+                        ->order_by('id_album','DESC')
+                        ->get();
+
+                    if($query->num_rows() > 0)
+                    {
+                        return $query;
+                    }
+                    else
+                    {
+                        return NULL;
+                    }
+                }
+
+                function edit_album($id_album)
+                {
+                    $id_album  =  array('id_album'=> $id_album);
+                    return $this->db->get_where('tbl_album',$id_album);
+                }
+
+                function count_album_picture($id_album)
+                {
+                    $query = $this->db->select('*')
+                        ->from('tbl_foto_gallery a')
+                        ->join('tbl_album b','a.album_id = b.id_album')
+                        ->where('a.album_id',$id_album)
+                        ->order_by('a.album_id','DESC')
+                        ->get();
+
+                    if($query->num_rows() > 0)
+                    {
+                        return $query->num_rows();
+                    }
+                    else
+                    {
+                        return NULL;
+                    }
+                }
+
+                function index_album_picture($halaman,$batas,$id_album)
+                {
+                    $query = "SELECT a.id_foto, a.album_id, a.caption_foto, a.foto_gallery, b.id_album, b.nama_album FROM tbl_foto_gallery a LEFT JOIN tbl_album b ON a.album_id = b.id_album WHERE a.album_id = '$id_album' limit $halaman, $batas";
+                    return $this->db->query($query);
+                }
+
+
             //fungsi date time
                 function tgl_time_indo($date=null){
                     $tglindo = date("d-m-Y H:i:s", strtotime($date));

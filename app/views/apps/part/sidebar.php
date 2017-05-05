@@ -32,7 +32,7 @@
             <li <?php if(isset($profil)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/profil/"><i class="fa fa-info-circle"></i> <span>Profil Desa</span></a></li>
             <li <?php if(isset($layanan)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/layanan/"><i class="fa fa-bell"></i> <span>layanan Desa</span></a></li>
             <li <?php if(isset($produk)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/produk/"><i class="fa fa-shopping-cart"></i> <span>Produk Desa</span></a></li>
-            <li <?php if(isset($galeri)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/galeri/"><i class="fa fa-picture-o"></i> <span>Galeri Foto</span></a></li>
+            <li <?php if(isset($gallery)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/gallery/"><i class="fa fa-picture-o"></i> <span>Galeri Foto</span></a></li>
             <li <?php if(isset($staff)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/staff/"><i class="fa fa-male"></i> <span>Staff Desa</span></a></li>
             <li <?php if(isset($sliders)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/sliders/"><i class="fa fa-desktop"></i> <span>Slider Website</span></a></li>
             <li <?php if(isset($users)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/users/"><i class="fa fa-user-circle-o"></i> <span>Users</span></a></li>

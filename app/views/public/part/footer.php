@@ -89,7 +89,7 @@
         <div class="row">
             <div class="col-md-12">
                 <p class="text-center copy">
-                    <a target='_blank' href='#'> Desa Podoroto</a> | <a target='_blank' href='#'>Kabupaten Jombang</a> | <a target='_blank' href='#'>Provisnsi Jawa Timur</a> </p>
+                    <a target='_blank' href='#' style="text-decoration: none"> Desa Podoroto</a> | <a target='_blank' style="text-decoration: none" href='#'>Kabupaten Jombang</a> | <a target='_blank' style="text-decoration: none" href='#'>Provisnsi Jawa Timur</a> </p>
             </div><!-- end column -->
         </div><!-- end row -->
     </div><!-- end container -->
@@ -98,7 +98,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p class="copy">COPYRIGHT &copy; 2016 <a href="<?php echo base_url() ?>" class="namadesa">Perpustakaan Desa Podoroto</a> Maintenance By  <a target="_blank" href="http://bismalabs.co.id/">Bisma Labs</a></p>
+                <p class="copy"><?php echo systems('site_footer') ?> Maintenance By  <a target="_blank" style="text-decoration: none" href="http://bismalabs.co.id/">Bisma Labs</a></p>
             </div><!-- end column -->
             <div class="col-md-6">
                 <ul class="list-socmed">

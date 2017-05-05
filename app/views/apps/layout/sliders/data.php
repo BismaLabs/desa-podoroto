@@ -15,7 +15,7 @@
             <div class="col-md-12">
                 <?php echo $this->session->flashdata('notif') ?>
 
-                <div class="box box-solid">
+                <div class="box box-success">
                     <div class="box-header with-border">
                         <h3 class="box-title"><i class="fa fa-picture-o"></i> Upload Gambar Slider</h3>
                     </div>
@@ -44,7 +44,7 @@
                     <!-- /.box-body -->
                 </div>
 
-                <div class="box box-solid">
+                <div class="box box-success">
                     <div class="box-header with-border">
                         <h3 class="box-title"><i class="fa fa-desktop"></i> Data Gambar Sliders</h3>
                     </div>
