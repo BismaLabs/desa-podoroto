@@ -8,11 +8,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 if(!function_exists('produk_sidebar'))
 {
-    function produk_sidebar()
+    function produk_sidebar($id_produk)
     {
         $CI = & get_instance();
 
-        $query = $CI->db->select('*')->order_by('id_produk' ,'DESC')->limit(5,0)->get('tbl_produk');
+        $query = $CI->db->select('*')->where_not_in('id_produk', $id_produk)->order_by('id_produk' ,'DESC')->limit(5,0)->get('tbl_produk');
 
         if($query->num_rows() < 0){
 

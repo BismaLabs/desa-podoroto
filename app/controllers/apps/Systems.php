@@ -46,6 +46,10 @@ class Systems extends CI_Controller{
                 'admin_footer'  => $this->input->post('admin_footer'),
                 'site_title'    => $this->input->post('site_title'),
                 'site_footer'   => $this->input->post('site_footer'),
+                'tentang'       => $this->input->post('tentang'),
+                'lokasi'        => $this->input->post('lokasi'),
+                'telephone'     => $this->input->post('telephone'),
+                'email'         => $this->input->post('email'),
                 'keywords'      => $this->input->post('keywords'),
                 'descriptions'  => $this->input->post('descriptions')
             );

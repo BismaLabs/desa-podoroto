@@ -8,11 +8,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 if(!function_exists('berita_sidebar'))
 {
-    function berita_sidebar()
+    function berita_sidebar($id_berita)
     {
         $CI = & get_instance();
 
-        $query = $CI->db->select('*')->order_by('id_berita' ,'DESC')->limit(5,0)->get('tbl_berita');
+        $query = $CI->db->select('*')->where_not_in('id_berita', $id_berita)->order_by('id_berita' ,'DESC')->limit(5,0)->get('tbl_berita');
 
         if($query->num_rows() < 0){
 

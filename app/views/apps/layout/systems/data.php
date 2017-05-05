@@ -42,6 +42,22 @@
                             <label for="artilces">Site Footer</label>
                             <input type="text" class="form-control" name="site_footer" value="<?php echo systems('site_footer') ?>" id="articles" placeholder="Enter Site Footer">
                         </div>
+                            <div class="form-group">
+                                <label for="artilces">Telephone</label>
+                                <input type="text" class="form-control" name="telephone" value="<?php echo systems('telephone') ?>" id="articles" placeholder="Enter Site Footer">
+                            </div>
+                            <div class="form-group">
+                                <label for="artilces">Alamat Email</label>
+                                <input type="text" class="form-control" name="email" value="<?php echo systems('email') ?>" id="articles" placeholder="Enter Site Footer">
+                            </div>
+                            <div class="form-group">
+                                <label for="artilces">Tentang Desa</label>
+                                <textarea class="form-control" name="tentang" rows="6" placeholder="Enter Tentang Desa"><?php echo systems('tentang') ?></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="artilces">Lokasi Desa</label>
+                                <textarea class="form-control" name="lokasi" rows="3" placeholder="Enter Lokasi Desa"><?php echo systems('lokasi') ?></textarea>
+                            </div>
                         <div class="form-group">
                             <label for="artilces">Meta Keywords</label>
                             <input type="text" class="form-control" name="keywords" value="<?php echo systems('keywords') ?>" id="articles" placeholder="Enter Meta Keywords">

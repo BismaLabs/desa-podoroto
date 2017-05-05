@@ -29,7 +29,7 @@
                                         $tags = explode(",", $detail_berita->keywords);
                                         foreach($tags as $k => $v):
                                             ?>
-                                            <button class="btn btn-sm btn-default" style="border-radius: 25px;font-weight: 300;text-transform: none"><i class="fa fa-tags"></i> <?php echo $v ?></button>
+                                            <button class="btn btn-sm btn-default" style="border-radius: 25px;font-weight: 300;text-transform: none;margin-bottom: 5px"><i class="fa fa-tags"></i> <?php echo $v ?></button>
                                             <?php
                                         endforeach;
                                     endif;
@@ -66,8 +66,8 @@
                         <h3 class="widget-title">Berita Terbaru</h3>
                     </div>
                     <ul>
-                        <?php if (berita_sidebar() != NULL) {
-                            foreach(berita_sidebar() as $hasil) {
+                        <?php if (berita_sidebar($detail_berita->id_berita) != NULL) {
+                            foreach(berita_sidebar($detail_berita->id_berita) as $hasil) {
                                 ?>
                         <li>
 
@@ -99,7 +99,8 @@
                                 ?>
 
                                 <li>
-                                    <a class="pull-left" href="<?php echo base_url() ?>kategori/<?php echo $hasil->slug ?>/" style="text-decoration: none"><?php echo $hasil->nama_kategori ?></a>
+                                    <a class="pull-left" href="<?php echo base_url() ?>kategori/<?php echo $hasil->slug ?>/" style="text-decoration: none"><i class="fa fa-folder"></i> <?php echo $hasil->nama_kategori ?></a>
+                                    <span class="pull-right"></span>
                                 </li>
 
                             <?php }} ?>
@@ -115,7 +116,7 @@
                         <?php if (kategori_sidebar() != NULL) {
                             foreach(kategori_sidebar() as $hasil) {
                                 ?>
-                                 <a href="<?php echo base_url() ?>kategori/<?php echo $hasil->slug ?>/" class="btn btn-sm btn-default" style="border-radius: 25px;font-weight: 300;text-transform: none"><i class="fa fa-tags"></i> <?php echo $hasil->nama_kategori ?></a>
+                                 <a href="<?php echo base_url() ?>kategori/<?php echo $hasil->slug ?>/" class="btn btn-sm btn-default" style="border-radius: 25px;font-weight: 300;text-transform: none;margin-bottom: 5px"><i class="fa fa-tags"></i> <?php echo $hasil->nama_kategori ?></a>
                             <?php }} ?>
 
                 </div><!-- end widget -->

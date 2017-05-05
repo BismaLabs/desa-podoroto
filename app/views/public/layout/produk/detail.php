@@ -29,7 +29,7 @@
                                         $tags = explode(",", $detail_produk->keywords);
                                         foreach($tags as $k => $v):
                                             ?>
-                                            <button class="btn btn-sm btn-default" style="border-radius: 25px;font-weight: 300;text-transform: none"><i class="fa fa-tags"></i> <?php echo $v ?></button>
+                                            <button class="btn btn-sm btn-default" style="border-radius: 25px;font-weight: 300;text-transform: none;margin-bottom: 5px"><i class="fa fa-tags"></i> <?php echo $v ?></button>
                                             <?php
                                         endforeach;
                                     endif;
@@ -71,8 +71,8 @@
                         <h3 class="widget-title">Produk Terbaru</h3>
                     </div>
                     <ul>
-                        <?php if (produk_sidebar() != NULL) {
-                            foreach(produk_sidebar() as $hasil) {
+                        <?php if (produk_sidebar($detail_produk->id_produk) != NULL) {
+                            foreach(produk_sidebar($detail_produk->id_produk) as $hasil) {
                                 ?>
                                 <li>
 

@@ -24,7 +24,7 @@
                 <h3><i class="fa fa-fw fa-map-marker"></i> Alamat</h3>
             </div>
             <div class="content-box" id="slideralamat">
-                <p>Jl. Raya Pasar Garu No.1 Kec. Kesamben, Kab. Jombang 61484.</p>
+                <p><?php echo systems('lokasi') ?></p>
             </div>
         </div>
 
