@@ -55,8 +55,9 @@
                         <h3 class="widget-title">Cari Berita</h3>
                     </div>
                     <div class="searchform">
-                        <form>
-                            <input type="text" class="txt" name="s" placeholder="Type Keywords">
+                        <form method="GET" action="<?php echo base_url('search/berita/');?>">
+                            <input type="text" class="txt" name="q" placeholder="Type Keywords">
+                            <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                             <input type="submit" value="search" class="btn btn-sm">
                         </form>
                     </div><!-- end searchform -->
