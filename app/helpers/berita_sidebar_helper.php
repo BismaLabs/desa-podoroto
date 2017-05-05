@@ -21,4 +21,18 @@ if(!function_exists('berita_sidebar'))
             return $query->result();
         }
     }
+
+    function berita_sidebar_terbaru()
+    {
+        $CI = & get_instance();
+
+        $query = $CI->db->select('*')->order_by('id_berita' ,'DESC')->limit(3,0)->get('tbl_berita');
+
+        if($query->num_rows() < 0){
+
+            return NULL;
+        }else{
+            return $query->result();
+        }
+    }
 }

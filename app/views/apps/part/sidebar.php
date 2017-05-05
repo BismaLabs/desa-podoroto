@@ -45,8 +45,9 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li <?php if(isset($systems)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/systems/"><i class="fa fa-circle-o text-green"></i> <span>System</span></a></li>
-                    <li <?php if(isset($mails)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/mails/"><i class="fa fa-circle-o text-green"></i> <span> Email Server</span></a></li>
+                    <li <?php if(isset($systems)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/systems/"><i class="fa fa-fire"></i> <span>System</span></a></li>
+                    <li <?php if(isset($mails)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/mails/"><i class="fa fa-envelope"></i> <span> Email Server</span></a></li>
+                    <li <?php if(isset($database)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/database/"><i class="fa fa-database"></i> <span> Backup Database</span></a></li>
                 </ul>
             </li>
             <li <?php if(isset($about)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/about/"><i class="fa fa-info-circle"></i> <span>Tentang Aplikasi</span></a></li>
