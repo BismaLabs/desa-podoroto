@@ -116,4 +116,76 @@ class Web extends CI_Model
         }
     }
 
+    //total search berita
+    function total_search_berita($keyword)
+    {
+        $query = $this->db->like('judul_berita',$keyword)->get('tbl_berita');
+
+        if($query->num_rows() > 0)
+        {
+            return $query->num_rows();
+        }
+        else
+        {
+            return NULL;
+        }
+    }
+
+    //index search berita
+    public function search_index_berita($keyword,$limit,$offset)
+    {
+        $query = $this->db->select('*')
+            ->from('tbl_berita')
+            ->limit($limit,$offset)
+            ->like('judul_berita',$keyword)
+            ->limit($limit,$offset)
+            ->order_by('id_berita','DESC')
+            ->get();
+
+        if($query->num_rows() > 0)
+        {
+            return $query;
+        }
+        else
+        {
+            return NULL;
+        }
+    }
+
+    //total search produk
+    function total_search_produk($keyword)
+    {
+        $query = $this->db->like('judul_produk',$keyword)->get('tbl_produk');
+
+        if($query->num_rows() > 0)
+        {
+            return $query->num_rows();
+        }
+        else
+        {
+            return NULL;
+        }
+    }
+
+    //index search produk
+    public function search_index_produk($keyword,$limit,$offset)
+    {
+        $query = $this->db->select('*')
+            ->from('tbl_produk')
+            ->limit($limit,$offset)
+            ->like('judul_produk',$keyword)
+            ->limit($limit,$offset)
+            ->order_by('id_produk','DESC')
+            ->get();
+
+        if($query->num_rows() > 0)
+        {
+            return $query;
+        }
+        else
+        {
+            return NULL;
+        }
+    }
+
 }

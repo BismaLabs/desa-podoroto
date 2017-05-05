@@ -1,9 +1,6 @@
 <div class="blog-section" style="padding-top: 20px">
     <div class="container">
         <div class="row">
-            <div class="centered-title">
-                <h3><i class="fa fa-book"></i> BERITA TERBARU</h3>
-            </div>
             <!-- blogs-title -->
             <div class="col-md-12" style="margin-bottom: 20px">
                 <?php echo $this->session->flashdata('notif') ?>
