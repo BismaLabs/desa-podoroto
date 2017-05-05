@@ -56,7 +56,7 @@
                     </div>
                     <div class="searchform">
                         <form method="GET" action="<?php echo base_url('search/berita/');?>">
-                            <input type="text" class="txt" name="q" placeholder="Type Keywords">
+                            <input type="text" class="txt" name="q" placeholder="Type Keywords" minlength="3" required>
                             <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                             <input type="submit" value="search" class="btn btn-sm">
                         </form>

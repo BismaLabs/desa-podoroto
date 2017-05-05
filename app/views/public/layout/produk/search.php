@@ -7,7 +7,7 @@
                 <div class="search-events" style="text-align: center">
                     <form method="GET" action="<?php echo base_url('search/produk/');?>" style="margin-top: 10px">
                         <div class = "input-group">
-                            <input type = "text" name = "q" class = "form-control input-lg" placeholder="Masukkan Judul produk dan Enter" autocomplete="off" id="articles">
+                            <input type = "text" name = "q" class = "form-control input-lg" placeholder="Masukkan Judul produk dan Enter" autocomplete="off" id="articles" minlength="3" required>
                             <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                             <span class = "input-group-btn">
                                   <button class = "btn btn-default btn-lg" type = "submit">
