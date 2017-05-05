@@ -61,7 +61,7 @@ class Web extends CI_Model
         return $result;
     }
 
-    //get berita
+    //get produk
     function get_produk($page){
         //offset
         $offset = 12 * $page;
@@ -69,6 +69,20 @@ class Web extends CI_Model
         $limit  = 12;
         //query
         $query  = "SELECT * FROM tbl_produk ORDER BY id_produk DESC limit $offset ,$limit";
+        //get result
+        $result = $this->db->query($query)->result();
+        //callback return
+        return $result;
+    }
+
+    //get kategori
+    function get_kategori($page){
+        //offset
+        $offset = 12 * $page;
+        //limit
+        $limit  = 12;
+        //query
+        $query  = "SELECT * FROM tbl_kategori ORDER BY id_kategori DESC limit $offset ,$limit";
         //get result
         $result = $this->db->query($query)->result();
         //callback return
@@ -176,6 +190,42 @@ class Web extends CI_Model
             ->like('judul_produk',$keyword)
             ->limit($limit,$offset)
             ->order_by('id_produk','DESC')
+            ->get();
+
+        if($query->num_rows() > 0)
+        {
+            return $query;
+        }
+        else
+        {
+            return NULL;
+        }
+    }
+
+    //total search kategori
+    function total_search_kategori($keyword)
+    {
+        $query = $this->db->like('nama_kategori',$keyword)->get('tbl_kategori');
+
+        if($query->num_rows() > 0)
+        {
+            return $query->num_rows();
+        }
+        else
+        {
+            return NULL;
+        }
+    }
+
+    //index search kategori
+    public function search_index_kategori($keyword,$limit,$offset)
+    {
+        $query = $this->db->select('*')
+            ->from('tbl_kategori')
+            ->limit($limit,$offset)
+            ->like('nama_kategori',$keyword)
+            ->limit($limit,$offset)
+            ->order_by('id_kategori','DESC')
             ->get();
 
         if($query->num_rows() > 0)

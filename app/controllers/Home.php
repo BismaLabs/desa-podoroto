@@ -112,4 +112,28 @@ class Home extends CI_Controller
         exit;
     }
 
+    function get_kategori()
+    {
+        //declare page
+        $page   =  $_GET['page'];
+        //var articles define
+        $kategori = $this->web->get_kategori($page);
+        //loop
+        foreach($kategori as $hasil){
+
+            echo '<div class="col-md-3">
+                    <div class="inner hover-app" style="text-align: center; background-color: white;-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);">
+                        <div class="entry-header">
+                            <h6 class="" style="">
+                                <a href="'.base_url().'kategori/'.$hasil->slug.'/" style="color:#00695C;font-size: 25px;font-weight: 700;text-decoration:none">
+                                '.$hasil->nama_kategori.'
+                                </a>
+                            </h6>
+                        </div><!-- end entry-header -->
+                    </div><!-- end inner -->
+                </div>';
+        }
+        exit;
+    }
+
 }

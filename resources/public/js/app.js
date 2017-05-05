@@ -58,3 +58,34 @@ var produk = function(page){
         }
     });
 };
+
+
+// function kategori
+$(document).ready(function(){
+    kategori(0);
+
+    $("#load_more_kategori").click(function(e){
+        e.preventDefault();
+        var page = $(this).data('val');
+        kategori(page);
+
+    });
+});
+
+var kategori = function(page){
+    $("#loader").show();
+    $("#load_more_kategori").show();
+    $.ajax({
+        url: BASE_URL+"home/get_kategori",
+        type:'GET',
+        data: {page:page}
+    }).done(function(response){
+        $("#kategori").append(response);
+        $("#loader").hide();
+        $('#load_more_kategori').data('val', ($('#load_more_kategori').data('val')+1));
+        //scroll();
+        if(response == ""){
+            $("#load_more_kategori").hide();
+        }
+    });
+};
