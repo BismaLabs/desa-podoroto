@@ -1,10 +1,12 @@
 <div class="blog-section">
     <div class="container">
         <div class="row">
-            <div class="centered-title">
-                <h3><i class="fa fa-book"></i> BERITA TERBARU</h3>
-            </div>
             <!-- blogs-title -->
+            <div class="col-md-12" style="margin-bottom: 20px">
+                <div class="centered-title">
+                    <h3><i class="fa fa-book"></i> BERITA TERBARU</h3>
+                </div>
+
             <?php
 
             foreach($data_berita->result() as $hasil){
@@ -39,6 +41,7 @@
                     </div><!-- end inner -->
                 </div><!-- end col -->
             <?php } ?>
+            </div>
 
         </div><!-- end row -->
         <div class="row" style="text-align: center">
@@ -50,12 +53,14 @@
 <div class="brand-section" style="background-color: #ffffff">
     <div class="container">
         <div class="row">
+            <div class="col-md-12">
 
-            <div class="centered-title">
-                <h3>Aplikasi Desa</h3>
-            </div><!-- blogs-title -->
+
 
             <div class="col-md-12 content-center">
+                <div class="centered-title">
+                    <h3>Aplikasi Desa</h3>
+                </div><!-- blogs-title -->
                 <div class="col-partner">
                     <div>
                         <a href="#" class="linkcls"><img class="hover-app" style="padding:10px;max-width: 200px;-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);" src="<?php echo base_url() ?>resources/images/app/simdes.png"></a>
@@ -83,5 +88,6 @@
                 </div><!-- end column -->
             </div><!-- end inner -->
         </div><!-- end row -->
+        </div>
     </div><!-- end container -->
 </div>

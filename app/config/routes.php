@@ -56,6 +56,9 @@ $route['translate_uri_dashes'] = FALSE;
 //routing pages
 $route['p/(:any)'] = "pages/detail/$1";
 
+//routing kategori
+$route['kategori/(:any)'] = "kategori/detail/$1";
+
 //routing berita
 $route['berita/(:any)'] = "berita/detail/$1";
 

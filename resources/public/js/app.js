@@ -89,3 +89,33 @@ var kategori = function(page){
         }
     });
 };
+
+// function album
+$(document).ready(function(){
+    album(0);
+
+    $("#load_more_album").click(function(e){
+        e.preventDefault();
+        var page = $(this).data('val');
+        album(page);
+
+    });
+});
+
+var album = function(page){
+    $("#loader").show();
+    $("#load_more_album").show();
+    $.ajax({
+        url: BASE_URL+"home/get_album",
+        type:'GET',
+        data: {page:page}
+    }).done(function(response){
+        $("#album").append(response);
+        $("#loader").hide();
+        $('#load_more_album').data('val', ($('#load_more_album').data('val')+1));
+        //scroll();
+        if(response == ""){
+            $("#load_more_album").hide();
+        }
+    });
+};

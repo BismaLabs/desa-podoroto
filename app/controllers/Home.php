@@ -112,6 +112,30 @@ class Home extends CI_Controller
         exit;
     }
 
+    function get_album()
+    {
+        //declare page
+        $page   =  $_GET['page'];
+        //var articles define
+        $album = $this->web->get_album($page);
+        //loop
+        foreach($album as $hasil){
+
+            echo '<div class="col-md-3">
+                    <img src="'.base_url().'resources/foto_gallery/album.png" alt="" style="object-fit: cover; width:100%; height:200px;">
+                    <div class="inner" style="padding:10px;background-color: #ffffff;-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);">
+                        <div class="entry-header">
+                            <h6 class="post-title entry-title wrap-berita">
+                               <a href="'.base_url().'galeri/foto/'.$this->encryption->encode($hasil->id_album).'" style="color:#4c4a45"> '. $hasil->nama_album .'</a>
+                            </h6>
+                        </div><!-- end entry-header -->
+                       
+                    </div><!-- end inner -->
+                </div>';
+        }
+        exit;
+    }
+
     function get_kategori()
     {
         //declare page

@@ -89,6 +89,20 @@ class Web extends CI_Model
         return $result;
     }
 
+    //get album
+    function get_album($page){
+        //offset
+        $offset = 12 * $page;
+        //limit
+        $limit  = 12;
+        //query
+        $query  = "SELECT * FROM tbl_album ORDER BY id_album DESC limit $offset ,$limit";
+        //get result
+        $result = $this->db->query($query)->result();
+        //callback return
+        return $result;
+    }
+
     //get detail berita
     function detail_berita($url)
     {
@@ -237,5 +251,81 @@ class Web extends CI_Model
             return NULL;
         }
     }
+
+    function count_kategori($slug)
+    {
+        $query = $this->db->select('a.id_berita, a.judul_berita, a.kategori_id, a.gambar, a.descriptions, a.created_at, b.id_kategori, b.slug, b.nama_kategori')
+            ->from('tbl_berita a')
+            ->join('tbl_kategori b','a.kategori_id = b.id_kategori')
+            ->where('b.slug',$slug)
+            ->order_by('a.id_berita','DESC')
+            ->get();
+
+        if($query->num_rows() > 0)
+        {
+            return $query->num_rows();
+        }
+        else
+        {
+            return NULL;
+        }
+    }
+
+    function index_kategori($halaman,$batas,$slug)
+    {
+        $query = "SELECT a.id_berita, a.judul_berita, a.kategori_id, a.slug, a.gambar, a.descriptions, a.created_at, b.id_kategori, b.slug, b.nama_kategori FROM tbl_berita as a JOIN tbl_kategori as b ON a.kategori_id = b.id_kategori WHERE b.slug = '$slug' limit $halaman, $batas";
+        return $this->db->query($query);
+    }
+
+    function get_kategori_judul($slug)
+    {
+        $query = $this->db->query("SELECT * FROM tbl_kategori WHERE slug = '$slug'");
+
+        if($query->num_rows() > 0)
+        {
+            return $query->row();
+        }else
+        {
+            return NULL;
+        }
+    }
+
+
+    //total search galeri/album
+    function total_search_galeri($keyword)
+    {
+        $query = $this->db->like('nama_album',$keyword)->get('tbl_album');
+
+        if($query->num_rows() > 0)
+        {
+            return $query->num_rows();
+        }
+        else
+        {
+            return NULL;
+        }
+    }
+
+    //index search kategori
+    public function search_index_galeri($keyword,$limit,$offset)
+    {
+        $query = $this->db->select('*')
+            ->from('tbl_album')
+            ->limit($limit,$offset)
+            ->like('nama_album',$keyword)
+            ->limit($limit,$offset)
+            ->order_by('id_album','DESC')
+            ->get();
+
+        if($query->num_rows() > 0)
+        {
+            return $query;
+        }
+        else
+        {
+            return NULL;
+        }
+    }
+
 
 }

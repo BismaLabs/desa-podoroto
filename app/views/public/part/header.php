@@ -25,6 +25,7 @@
     <link href="<?php echo base_url() ?>resources/public/css/weather.css" rel="stylesheet"/>
     <link href="<?php echo base_url() ?>resources/public/css/styles.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>resources/public/css/custom.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>resources/public/css/lightbox.min.css" rel="stylesheet">
     <script>
         var BASE_URL = '<?php echo base_url() ?>';
     </script>

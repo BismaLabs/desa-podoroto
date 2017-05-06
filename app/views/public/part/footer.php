@@ -46,36 +46,17 @@
                             <h3 class="widget-title">Foto Desa</h3>
                         </div>
                         <ul class="list-galleries">
+                            <?php
+                                if (foto_footer() != NULL) {
+                                foreach(foto_footer() as $hasil) {
+                            ?>
                             <li>
                                 <a href="#" class="open_x" id="7">
-                                    <img src="http://tambahrejo.desa.id/upload/image/IMG_0017.JPG" width="100px" height="100px" alt="" style="object-fit: cover;" >
+                                    <a href="<?php echo base_url() ?>resources/foto_gallery/<?php echo url_title(strtolower($hasil->nama_album)) ?>/<?php echo $hasil->foto_gallery ?>" data-lightbox="image-1" data-title="<?php echo $hasil->caption_foto ?>"><img src="<?php echo base_url() ?>resources/foto_gallery/<?php echo url_title(strtolower($hasil->nama_album)) ?>/<?php echo $hasil->foto_gallery ?>" width="100px" height="100px" alt="" class="img-rounded" style="object-fit: cover;" ></a>
                                 </a><!-- thumb 01 -->
                             </li>
-                            <li>
-                                <a href="#" class="open_x" id="6">
-                                    <img src="http://tambahrejo.desa.id/upload/image/P_20160511_154908.jpg" width="100px" height="100px" alt="" style="object-fit: cover;" >
-                                </a><!-- thumb 01 -->
-                            </li>
-                            <li>
-                                <a href="#" class="open_x" id="8">
-                                    <img src="http://tambahrejo.desa.id/upload/image/DSC_0414[1].jpg" width="100px" height="100px" alt="" style="object-fit: cover;" >
-                                </a><!-- thumb 01 -->
-                            </li>
-                            <li>
-                                <a href="#" class="open_x" id="10">
-                                    <img src="http://tambahrejo.desa.id/upload/image/P_20160511_151730.jpg" width="100px" height="100px" alt="" style="object-fit: cover;" >
-                                </a><!-- thumb 01 -->
-                            </li>
-                            <li>
-                                <a href="#" class="open_x" id="11">
-                                    <img src="http://tambahrejo.desa.id/upload/image/P_20160621_205435.jpg" width="100px" height="100px" alt="" style="object-fit: cover;" >
-                                </a><!-- thumb 01 -->
-                            </li>
-                            <li>
-                                <a href="#" class="open_x" id="12">
-                                    <img src="http://tambahrejo.desa.id/upload/image/tambahrejo2.jpg" width="100px" height="100px" alt="" style="object-fit: cover;" >
-                                </a><!-- thumb 01 -->
-                            </li>
+                            <?php }} ?>
+
                         </ul>
                     </div><!-- end gallery wrapper -->
                 </div><!-- end inner -->
@@ -132,6 +113,7 @@
 <script src="<?php echo base_url() ?>resources/public/js/fancybox2/jquery.fancybox-thumbs.js"></script>
 <script src="<?php echo base_url() ?>resources/public/parts/js/global.js"></script>
 <script src="<?php echo base_url() ?>resources/public/js/weather.js" type="text/javascript"></script>
+<script src="<?php echo base_url() ?>resources/public/js/lightbox.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url() ?>resources/public/js/app.js" type="text/javascript"></script>
 </body>
 </html>
