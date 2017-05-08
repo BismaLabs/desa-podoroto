@@ -89,7 +89,7 @@
                         </div>
                     </nav>
                     <div class="appoinment-header">
-                        <a href="#footer-section" class="btn btn-md btn-default">Kontak Desa</a>
+                        <a href="<?php echo base_url() ?>kontak/" class="btn btn-md btn-default">Kontak Desa</a>
                     </div>
                 </div>
             </div>

@@ -33,7 +33,7 @@
 
                                 <td style='padding: 0 5px;'><strong>Email</strong></td>
                                 <td style='padding: 0 5px;'>:</td>
-                                <td style='padding: 0 5px;'><a href='mailto:info@tambahrejo.desa.id'><?php echo systems('email') ?></a></td>
+                                <td style='padding: 0 5px;'><a href='mailto:<?php echo systems('email') ?>'><?php echo systems('email') ?></a></td>
                             </tr>								</table>
                     </div><!-- end inner -->
                 </div><!-- end widget -->
