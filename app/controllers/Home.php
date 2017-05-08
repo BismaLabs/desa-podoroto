@@ -20,6 +20,8 @@ class Home extends CI_Controller
     {
         $data = array(
             'title'         => systems('site_title'),
+            'keywords'         => systems('keywords'),
+            'descriptions'     => systems('descriptions'),
             'data_berita'   => $this->web->get_berita_terbaru(),
             'data_produk'   => $this->web->get_produk_terbaru(),
             'data_sliders'  => $this->web->get_sliders()

@@ -9,14 +9,25 @@
     <meta name="keywords" content="">
     <link rel="icon" href=""/>
     <title><?php echo $title ?></title>
+    <meta name="product" content="<?php echo $title ?>">
+    <meta name="description" content="<?php if(isset($descriptions)) { echo $descriptions; }   ?>">
+    <meta name="author" content="<?php if(isset($author)) { echo $author; } else { echo 'Desa Podoroto'; }  ?>">
+    <meta name="keywords" content="<?php if(isset($keywords)) { echo $keywords; }   ?>">
+    <meta property="og:url" content="<?php print base_url() ?><?php print $this->uri->uri_string() ?>">
+    <meta property="og:site_name" content="<?php echo $title ?>">
+    <meta property="og:description" content="<?php if(isset($descriptions)) { echo $descriptions; }   ?>">
+    <meta property="og:image" content="<?php echo base_url() ?>resources/public/images/logo-jombang.png">
+    <meta property="twitter:site" content="<?php echo $title ?>">
+    <meta property="twitter:site:id" content="<?php echo $title ?>">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:description" content="<?php if(isset($descriptions)) { echo $descriptions; }   ?>">
+    <meta property="twitter:image:src" content="<?php echo base_url() ?>resources/public/images/logo-jombang.png">
     <!-- Bootstrap -->
     <link href="<?php echo base_url() ?>resources/public/css/rajdhani.css" rel='stylesheet' type='text/css'>
     <link href="<?php echo base_url() ?>resources/public/css/opensans.css" rel='stylesheet' type='text/css'>
     <link href="<?php echo base_url() ?>resources/public/plugins/wicon/css/weather-icons.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>resources/public/js/select2/select2.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>resources/public/js/fileupload/bootstrap-fileupload.css" rel="stylesheet">
-    <script src="<?php echo base_url() ?>resources/public/js/plugins/pace/pace.min.js"></script>
-    <link href="<?php echo base_url() ?>resources/publicl/js/plugins/pace/flash.front.css" rel="stylesheet"/>
     <link rel="stylesheet" href="<?php echo base_url() ?>resources/public/js/fancybox2/jquery.fancybox.css"
           type="text/css" media="screen"/>
     <link rel="stylesheet" href="<?php echo base_url() ?>resources/public/js/fancybox2/jquery.fancybox-thumbs.css"

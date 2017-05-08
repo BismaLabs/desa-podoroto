@@ -253,3 +253,8 @@
   -webkit-box-shadow: 0 8px 6px -6px #323232;
   box-shadow: 0 8px 6px -6px #323232;
 }
+
+.card-photo .card-img:hover {
+  color: #d52f36;
+  background: url("../images/search.png") center center no-repeat rgba(0, 0, 0, 0.51);
+}

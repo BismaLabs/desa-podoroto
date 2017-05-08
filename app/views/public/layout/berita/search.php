@@ -63,14 +63,14 @@
             <?php echo $paging ?>
 
             <?php else : ?>
-            <div class="col-md-12">
-                <div class="alert alert-danger">
-                    <span><b> Warning! </b> Data tidak ada didatabase </span>
+                <div class="col-md-12">
+                    <div class="alert alert-danger">
+                        <span style="font-size: 20px"> <i class="fa fa-info-circle"></i> Maaf, tidak ada hasil yang ditemukan berdasarkan permintaan pencarian Anda</span>
+                    </div>
+                    <div class="reload" style="text-align: center;margin-bottom: 7px">
+                        <a  href="<?php echo base_url('berita?source=reload&utf8=✓') ?>" class="btn btn-md btn-default" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Reloading..."><i class="fa fa-repeat"></i> Muat Ulang Halaman</a>
+                    </div>
                 </div>
-                <div class="reload" style="text-align: center;margin-bottom: 7px">
-                    <a  href="<?php echo base_url('berita?source=reload&utf8=✓') ?>" class="btn btn-danger btn-reset btn-fill" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Reloading..."><i class="fa fa-repeat"></i> Reload Page</a>
-                </div>
-            </div>
             <?php endif; ?>
         </div>
     </div><!-- end container -->

@@ -70,7 +70,7 @@
         <div class="row">
             <div class="col-md-12">
                 <p class="text-center copy">
-                    <a target='_blank' href='#' style="text-decoration: none"> Desa Podoroto</a> | <a target='_blank' style="text-decoration: none" href='#'>Kabupaten Jombang</a> | <a target='_blank' style="text-decoration: none" href='#'>Provisnsi Jawa Timur</a> </p>
+                    <a target='_blank' href='http://podoroto.desa.id/' style="text-decoration: none"> Desa Podoroto</a> | <a target='_blank' style="text-decoration: none" href='http://www.jombangkab.go.id/'>Kabupaten Jombang</a> | <a target='_blank' style="text-decoration: none" href='http://www.jatimprov.go.id/'>Provisnsi Jawa Timur</a> </p>
             </div><!-- end column -->
         </div><!-- end row -->
     </div><!-- end container -->
@@ -111,7 +111,6 @@
 <script src="<?php echo base_url() ?>resources/public/js/moment.min.js"></script>
 <script src="<?php echo base_url() ?>resources/public/js/fancybox2/jquery.fancybox.js"></script>
 <script src="<?php echo base_url() ?>resources/public/js/fancybox2/jquery.fancybox-thumbs.js"></script>
-<script src="<?php echo base_url() ?>resources/public/parts/js/global.js"></script>
 <script src="<?php echo base_url() ?>resources/public/js/weather.js" type="text/javascript"></script>
 <script src="<?php echo base_url() ?>resources/public/js/lightbox.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url() ?>resources/public/js/app.js" type="text/javascript"></script>
