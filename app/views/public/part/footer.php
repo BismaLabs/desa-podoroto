@@ -65,16 +65,6 @@
     </div>
     </div>
 </footer>
-<div class="footer-link">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <p class="text-center copy">
-                    <a target='_blank' href='http://podoroto.desa.id/' style="text-decoration: none"> Desa Podoroto</a> | <a target='_blank' style="text-decoration: none" href='http://www.jombangkab.go.id/'>Kabupaten Jombang</a> | <a target='_blank' style="text-decoration: none" href='http://www.jatimprov.go.id/'>Provisnsi Jawa Timur</a> </p>
-            </div><!-- end column -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div><!-- end footer-credit -->
 <div class="footer-credit">
     <div class="container">
         <div class="row">
