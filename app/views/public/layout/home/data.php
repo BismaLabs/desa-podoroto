@@ -1,11 +1,26 @@
 <div class="blog-section">
     <div class="container">
         <div class="row">
-            <!-- blogs-title -->
-            <div class="col-md-12" style="margin-bottom: 20px">
-                <div class="centered-title">
-                    <h3><i class="fa fa-book"></i> BERITA TERBARU</h3>
+            <div class="centered-title" style="margin-bottom: 0px">
+                <h3><i class="fa fa-book"></i> BERITA TERBARU</h3>
+            </div>
+
+            <div class="col-md-12" style="margin-bottom: 25px">
+                <?php echo $this->session->flashdata('notif') ?>
+                <div class="search-events" style="text-align: center">
+                    <form method="GET" action="<?php echo base_url('seacrh/berita/');?>" style="margin-top: 10px">
+                        <div class = "input-group">
+                            <input type = "text" name = "q" class = "form-control input-lg" placeholder="Masukkan Judul Berita dan Enter" autocomplete="off" id="articles" minlength="3" required>
+                            <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
+                            <span class = "input-group-btn">
+                                  <button class = "btn btn-default btn-lg" type = "submit">
+                                     <i class="fa fa-search"></i> Cari
+                                  </button>
+                               </span>
+                        </div>
+                    </form>
                 </div>
+            </div>
 
             <?php
 
@@ -41,7 +56,7 @@
                     </div><!-- end inner -->
                 </div><!-- end col -->
             <?php } ?>
-            </div>
+
 
         </div><!-- end row -->
         <div class="row" style="text-align: center">
