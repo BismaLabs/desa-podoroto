@@ -127,11 +127,11 @@ class Sliders extends CI_Controller {
         if($this->apps->apps_id())
         {
             $id     = $this->encryption->decode($this->uri->segment(4));
-            $query  = $this->db->query("SELECT id_slider, image_slider FROM tbl_slider WHERE id_slider ='$id'")->row();
+            $query  = $this->db->query("SELECT id_slider, images FROM tbl_sliders WHERE id_slider ='$id'")->row();
             unlink(realpath('resources/images/sliders/'.$query->image_slider));
             unlink(realpath('resources/images/sliders/'.$query->image_slider));
             $key['id_slider'] = $id;
-            $this->db->delete("tbl_slider", $key);
+            $this->db->delete("tbl_sliders", $key);
             $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible" style="font-family:Roboto">
 			                                                    <i class="fa fa-check"></i> Data Berhasil Dihapus.
 			                                                </div>');

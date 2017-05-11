@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>resources/backend/dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>resources/backend/dist/css/toastr.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>resources/backend/dist/css/skins/_all-skins.min.css">
+    <link href="<?php echo base_url() ?>resources/public/css/lightbox.min.css" rel="stylesheet">
     <![endif]-->
     <script>
+
         var url = "<?php echo base_url() ?>";
+
     </script>
 </head>
 <body class="hold-transition skin-green fixed sidebar-mini">

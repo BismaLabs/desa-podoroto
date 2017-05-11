@@ -69,7 +69,7 @@
                                     <tr>
                                         <td class="text-center"><?php echo $no++; ?></td>
                                         <td> <?php echo $hasil->caption ?></td>
-                                        <td class="text-center"> <img src="<?php echo base_url() ?>resources/images/sliders/<?php echo $hasil->images ?>" class="img-responsive" style="width: 600px;height: 300px"></td>
+                                        <td class="text-center"> <a href="<?php echo base_url() ?>resources/images/sliders/<?php echo $hasil->images ?>" data-lightbox="image-1" data-title="<?php echo $hasil->caption ?>"> <img src="<?php echo base_url() ?>resources/images/sliders/<?php echo $hasil->images ?>" class="img-responsive" style="width: 600px;height: 300px"></a></td>
                                         <td class="text-center">
                                             <a class='badge badge-danger' style="font-family: Roboto;font-weight: 400;background-color: #842020;" data-toggle="tooltip" data-placement="top" title="Delete ?" href='<?php echo base_url() ?>apps/sliders/delete/<?php echo $this->encryption->encode($hasil->id_slider) ?>'><i class="fa fa-trash"></i> Delete</a>
                                         </td>

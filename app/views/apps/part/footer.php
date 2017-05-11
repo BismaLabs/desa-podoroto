@@ -28,6 +28,7 @@
 <script src="<?php echo base_url() ?>resources/backend/dist/js/ajax_validation.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url() ?>resources/backend/dist/js/demo.js"></script>
+<script src="<?php echo base_url() ?>resources/public/js/lightbox.min.js" type="text/javascript"></script>
 <script>
 
     $('[data-toggle="tooltip"]').tooltip();
