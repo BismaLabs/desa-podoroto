@@ -1,12 +1,6 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            <?php echo $title ?>
-            <small>Web Applications</small>
-        </h1>
-    </section>
 
     <!-- Main content -->
     <div class="content">
@@ -40,7 +34,7 @@
                                 <input type="text" class="form-control" value="<?php echo $data_berita['judul_berita'] ?>" name="judul_berita" placeholder="Judul Berita">
                             </div>
                             <div class="form-group">
-                                <label>Kategori Buku</label>
+                                <label>Kategori Berita</label>
                                 <select class="form-control" name="kategori" id="kategori">
                                     <option value="" selected="selected">- - Pilih Kategori Berita - -</option>
                                     <?php

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php echo $title ?> - <?php echo systems('admin_title') ?></title>
+    <link rel="icon" href="<?php echo base_url() ?>resources/images/favicon.png"/>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="<?php echo base_url() ?>resources/backend/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>resources/backend/font-awesome/css/font-awesome.min.css">
@@ -11,7 +12,14 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>resources/backend/dist/css/toastr.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>resources/backend/dist/css/skins/_all-skins.min.css">
     <link href="<?php echo base_url() ?>resources/public/css/lightbox.min.css" rel="stylesheet">
-    <![endif]-->
+    <style type="text/css">
+        .box-title {
+            text-transform: uppercase;
+        }
+        .form-group {
+            text-transform: uppercase;
+        }
+    </style>
     <script>
 
         var url = "<?php echo base_url() ?>";
@@ -26,9 +34,9 @@
         <!-- Logo -->
         <a href="<?php echo base_url() ?>apps/dashboard/" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini" style="font-size: 15px"><b>Web</b> Apps</span>
+            <span class="logo-mini" style="font-size: 25px"><b>BISMA</b> LABS</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg" style="font-size: 15px"><b>Web</b> Applications</span>
+            <span class="logo-lg" style="font-size: 25px"><b>BISMA</b> LABS</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">

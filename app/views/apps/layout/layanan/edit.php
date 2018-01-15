@@ -1,12 +1,6 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            <?php echo $title ?>
-            <small>Web Applications</small>
-        </h1>
-    </section>
 
     <!-- Main content -->
     <div class="content">

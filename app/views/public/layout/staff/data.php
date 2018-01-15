@@ -19,15 +19,7 @@
                                         <img src="<?php echo base_url() ?>resources/images/staff/thumb/<?php echo $hasil->foto ?>" width="270px"
                                              height="270px" alt="" style="object-fit: cover;">
                                     </figure>
-                                    <div class="short-social"
-                                         style="background-color: #ffffff;box-shadow: 1px 1px 2px 0 rgba(0,0,0,.1);">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-fw fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-fw fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-fw fa-google-plus"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-fw fa-linkedin"></i></a></li>
-                                        </ul>
-                                    </div><!-- end short-social -->
+                                    
                                 </div><!-- end onleft -->
 
                                 <div class="onright"
@@ -41,13 +33,13 @@
                                                 <td>JABATAN</td>
                                                 <td><?php echo $hasil->jabatan ?></td>
                                             </tr>
-                                            <tr>
-                                                <td>TELEPHONE</td>
-                                                <td><?php echo $hasil->telephone ?></td>
-                                            </tr>
-                                            <tr>
+                                            <!-- <tr>
                                                 <td>ALAMAT EMAIL</td>
                                                 <td><?php echo $hasil->email ?></td>
+                                            </tr> -->
+                                            <tr>
+                                                <td>ALAMAT RUMAH</td>
+                                                <td><?php echo $hasil->alamat ?></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -75,17 +67,9 @@
                                     <div class="onleft">
                                         <figure>
                                             <img src="<?php echo base_url() ?>resources/images/staff/thumb/<?php echo $hasil->foto ?>" width="150px"
-                                                 height="145px" alt="" style="object-fit: cover;">
+                                                 height="195px" alt="" style="object-fit: cover;">
                                         </figure>
-                                        <div class="short-social"
-                                             style="background-color: #ffffff;box-shadow: 1px 1px 2px 0 rgba(0,0,0,.1);">
-                                            <ul>
-                                                <li><a href="#"><i class="fa fa-fw fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-fw fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-fw fa-google-plus"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-fw fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div><!-- end short-social -->
+                                        
                                     </div><!-- end onleft -->
 
                                     <div class="onright"
@@ -99,13 +83,13 @@
                                                     <td>JABATAN</td>
                                                     <td><?php echo $hasil->jabatan ?></td>
                                                 </tr>
-                                                <tr>
-                                                    <td>TELEPHONE</td>
-                                                    <td><?php echo $hasil->telephone ?></td>
-                                                </tr>
-                                                <tr>
+                                                <!-- <tr>
                                                     <td>ALAMAT EMAIL</td>
                                                     <td><?php echo $hasil->email ?></td>
+                                                </tr> -->
+                                                <tr>
+                                                    <td>ALAMAT RUMAH</td>
+                                                    <td><?php echo $hasil->alamat ?></td>
                                                 </tr>
                                                 </tbody>
                                             </table>

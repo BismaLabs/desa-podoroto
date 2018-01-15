@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link rel="icon" href=""/>
+    <link rel="icon" href="<?php echo base_url() ?>resources/images/favicon.png"/>
     <title><?php echo $title ?></title>
     <meta name="product" content="<?php echo $title ?>">
     <meta name="description" content="<?php if(isset($descriptions)) { echo $descriptions; }   ?>">
@@ -83,8 +83,22 @@
                                     </ul>
                                 </li>
                                 <li><a href="<?php echo base_url() ?>produk/">Produk Desa</a></li>
+                                <li class="has-child"><a href="#">Lembaga</a>
+                                    <ul class="sub-menu">
+                                        <?php if (lembaga_header() != NULL) {
+                                            foreach(lembaga_header() as $hasil) {
+                                                ?>
+                                                <li><a href="<?php echo base_url() ?>p/<?php echo $hasil->slug ?>/"><?php echo $hasil->judul_page ?></a></li>
+                                            <?php }} ?>
+                                    </ul>
+                                </li>
                                 <li><a href="<?php echo base_url() ?>berita/">Berita</a></li>
-                                <li><a href="<?php echo base_url() ?>galeri/">Galeri Foto</a></li>
+                                <li class="has-child"><a href="#">Galeri</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="<?php echo base_url() ?>galeri/foto/"> Foto</a></li>
+                                        <li><a href="<?php echo base_url() ?>galeri/video/"> Video</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </nav>

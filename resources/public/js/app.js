@@ -119,3 +119,33 @@ var album = function(page){
         }
     });
 };
+
+// function video
+$(document).ready(function(){
+    video(0);
+
+    $("#load_more_video").click(function(e){
+        e.preventDefault();
+        var page = $(this).data('val');
+        video(page);
+
+    });
+});
+
+var video = function(page){
+    $("#loader").show();
+    $("#load_more_video").show();
+    $.ajax({
+        url: BASE_URL+"home/get_video",
+        type:'GET',
+        data: {page:page}
+    }).done(function(response){
+        $("#video").append(response);
+        $("#loader").hide();
+        $('#load_more_video').data('val', ($('#load_more_video').data('val')+1));
+        //scroll();
+        if(response == ""){
+            $("#load_more_video").hide();
+        }
+    });
+};

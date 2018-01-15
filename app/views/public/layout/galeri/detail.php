@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12" style="margin-bottom: 20px">
-                <label style="font-size: 25px;text-transform: uppercase">ALBUM : <?php echo $nama_album ?></label>
+                <label style="font-size: 25px;text-transform: uppercase"><i class="fa fa-picture-o"></i> ALBUM : <?php echo $nama_album ?></label>
                 <?php echo $this->session->flashdata('notif') ?>
             </div>
             <?php

@@ -2,12 +2,6 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            <?php echo $title ?>
-            <small>Web Applications</small>
-        </h1>
-    </section>
 
     <!-- Main content -->
     <div class="content">
@@ -25,7 +19,7 @@
                             echo form_open_multipart('apps/kategori/save?source=header&utf8=✓', $attributes)
                             ?>
                             <div class="form-group">
-                                <label>Nama Category</label>
+                                <label>Nama Kategori</label>
                                 <input type="text" class="form-control" name="nama_kategori" value="<?php echo $data_kategori['nama_kategori'] ?>" placeholder="Nama Kategori">
                                 <input type="hidden" name="type" value="<?php echo $type ?>">
                                 <input type="hidden" name="id_kategori" value="<?php echo $this->encryption->encode($data_kategori['id_kategori']) ?>">

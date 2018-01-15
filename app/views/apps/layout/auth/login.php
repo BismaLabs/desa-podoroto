@@ -12,8 +12,8 @@
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
-    <div class="login-logo" style="font-size: 25px">
-        <a href="<?php echo base_url() ?>"><b>Web</b> Application</a>
+    <div class="login-logo" style="font-size: 40px">
+        <a href="<?php echo base_url() ?>"><b>BISMA</b> LABS</a>
     </div>
     <div class="login-box-body" style="-moz-box-shadow: 1px 1px 2px 0 rgba(0,0,0,.12);webkit-box-shadow: 1px 1px 2px 0 rgba(0,0,0,.12);box-shadow: 1px 1px 2px 0 rgba(0,0,0,.12);">
         <p class="login-box-msg">Administrator system</p>

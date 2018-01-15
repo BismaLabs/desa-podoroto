@@ -69,26 +69,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p class="copy"><?php echo systems('site_footer') ?> Maintenance By  <a target="_blank" style="text-decoration: none" href="http://bismalabs.co.id/">Bisma Labs</a></p>
+                <p class="copy" style="font-size: 13px"><?php echo systems('site_footer') ?></p>
             </div><!-- end column -->
             <div class="col-md-6">
-                <ul class="list-socmed">
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-instagram"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-youtube"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-google-plus"></i></a>
-                    </li>
-                </ul>
+                <p class="copy" style="float: right;font-size: 13px">  <a target="_blank" style="text-decoration: none" href="http://bismalabs.co.id/">Bisma Labs - Website Desa, Version <b>2.0.0</b></a></p>
             </div>
         </div>
     </div>

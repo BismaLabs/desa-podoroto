@@ -74,7 +74,7 @@ function show_chart(text, kat, total)
             x: -20 //center
         },
         subtitle: {
-            text: 'Source: http://www.podoroto.desa.id',
+            text: url,
             x: -20
         },
         xAxis: {

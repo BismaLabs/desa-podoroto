@@ -2,12 +2,6 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            <?php echo $title ?>
-            <small>Web Applications</small>
-        </h1>
-    </section>
 
     <!-- Main content -->
     <div class="content">
@@ -61,7 +55,7 @@
                                         <td> <?php echo $this->apps->tgl_jam_indo_no_hari($hasil->updated_at) ?></td>
                                         <td class="text-center">
                                             <a class="badge badge-success" style="background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo base_url() ?>apps/produk/edit/<?php echo $this->encryption->encode($hasil->id_produk) ?>"><i class="fa fa-pencil"></i> Edit</a>
-                                            <a class="badge badge-danger" style="font-family: Roboto;font-weight: 400;background-color: #842020;" data-toggle="tooltip" data-placement="top" title="Delete ?" href="<?php echo base_url() ?>apps/produk/delete/<?php echo $this->encryption->encode($hasil->id_produk) ?>"><i class="fa fa-trash"></i> Delete</a>
+                                            <a a onclick="return confirm('Apakah Anda yakin ingin menghapus ini?');" class="badge badge-danger" style="font-family: Roboto;font-weight: 400;background-color: #842020;" data-toggle="tooltip" data-placement="top" title="Delete ?" href="<?php echo base_url() ?>apps/produk/delete/<?php echo $this->encryption->encode($hasil->id_produk) ?>"><i class="fa fa-trash"></i> Delete</a>
                                         </td>
                                     </tr>
                                     <?php

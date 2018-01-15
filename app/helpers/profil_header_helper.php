@@ -12,7 +12,7 @@ if(!function_exists('profil_header'))
     {
         $CI = & get_instance();
 
-        $query = $CI->db->select('*')->where('kategori', 'profil')->order_by('judul_page' ,'ASC')->get('tbl_pages');
+        $query = $CI->db->select('*')->where('kategori', 'profil')->order_by('id_page' ,'ASC')->get('tbl_pages');
 
         if($query->num_rows() < 0){
 

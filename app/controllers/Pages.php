@@ -14,6 +14,8 @@ class Pages extends CI_Controller
         parent::__construct();
         //load model
         $this->load->model('web');
+        //get visitor
+        //$this->web->counter_visitor();
     }
 
     public function detail($url)

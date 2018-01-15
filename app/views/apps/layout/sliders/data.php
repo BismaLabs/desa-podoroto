@@ -2,12 +2,6 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            <?php echo $title ?>
-            <small>Web Applications</small>
-        </h1>
-    </section>
 
     <!-- Main content -->
     <div class="content">
@@ -69,9 +63,9 @@
                                     <tr>
                                         <td class="text-center"><?php echo $no++; ?></td>
                                         <td> <?php echo $hasil->caption ?></td>
-                                        <td class="text-center"> <a href="<?php echo base_url() ?>resources/images/sliders/<?php echo $hasil->images ?>" data-lightbox="image-1" data-title="<?php echo $hasil->caption ?>"> <img src="<?php echo base_url() ?>resources/images/sliders/<?php echo $hasil->images ?>" class="img-responsive" style="width: 600px;height: 300px"></a></td>
+                                        <td class="text-center"> <a href="<?php echo base_url() ?>resources/images/sliders/<?php echo $hasil->images ?>" data-lightbox="image-1" data-title="<?php echo $hasil->caption ?>"> <img src="<?php echo base_url() ?>resources/images/sliders/<?php echo $hasil->images ?>" class="img-responsive" style="width: 600px;height: 400px"></a></td>
                                         <td class="text-center">
-                                            <a class='badge badge-danger' style="font-family: Roboto;font-weight: 400;background-color: #842020;" data-toggle="tooltip" data-placement="top" title="Delete ?" href='<?php echo base_url() ?>apps/sliders/delete/<?php echo $this->encryption->encode($hasil->id_slider) ?>'><i class="fa fa-trash"></i> Delete</a>
+                                            <a a onclick="return confirm('Apakah Anda yakin ingin menghapus ini?');" class='badge badge-danger' style="font-family: Roboto;font-weight: 400;background-color: #842020;" data-toggle="tooltip" data-placement="top" title="Delete ?" href='<?php echo base_url() ?>apps/sliders/delete/<?php echo $this->encryption->encode($hasil->id_slider) ?>'><i class="fa fa-trash"></i> Delete</a>
                                         </td>
                                     </tr>
                                     <?php

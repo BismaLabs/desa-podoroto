@@ -2,12 +2,6 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            <?php echo $title ?>
-            <small>Web Applications</small>
-        </h1>
-    </section>
 
     <!-- Main content -->
     <div class="content">
@@ -67,7 +61,7 @@
                                         <td class="text-center"><?php echo $no++; ?></td>
                                         <td><?php echo $hasil->nama_user ?></td>
                                         <td> <?php echo $hasil->username ?></td>
-                                        <td> <?php echo $this->apps->time_elapsed_string($hasil->updated_at) ?></td>
+                                        <td> <?php echo $this->apps->tgl_jam_indo_no_hari($hasil->updated_at) ?></td>
                                         <td class="text-center">
                                             <?php echo $restrict ?>
                                         </td>

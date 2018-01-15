@@ -103,6 +103,20 @@ class Web extends CI_Model
         return $result;
     }
 
+    //get album
+    function get_video($page){
+        //offset
+        $offset = 12 * $page;
+        //limit
+        $limit  = 12;
+        //query
+        $query  = "SELECT * FROM tbl_video ORDER BY id_video DESC limit $offset ,$limit";
+        //get result
+        $result = $this->db->query($query)->result();
+        //callback return
+        return $result;
+    }
+
     //get detail berita
     function detail_berita($url)
     {
@@ -327,15 +341,15 @@ class Web extends CI_Model
         }
     }
 
-    public function detail_album($id_album)
+    public function detail_album($slug)
     {
-        $query = $this->db->query("SELECT a.id_foto, a.album_id, a.caption_foto, a.foto_gallery, b.id_album, b.nama_album FROM tbl_foto_gallery a LEFT JOIN tbl_album b ON a.album_id = b.id_album WHERE a.album_id = '$id_album'");
+        $query = $this->db->query("SELECT a.id_foto, a.album_id, a.caption_foto, a.foto_gallery, b.id_album, b.nama_album FROM tbl_foto_gallery a LEFT JOIN tbl_album b ON a.album_id = b.id_album WHERE b.slug = '$slug'");
         return $query;
     }
 
-    public function detail_album_array($id_album)
+    public function detail_album_array($slug)
     {
-        $query = $this->db->query("SELECT a.id_foto, a.album_id, a.caption_foto, a.foto_gallery, b.id_album, b.nama_album FROM tbl_foto_gallery a LEFT JOIN tbl_album b ON a.album_id = b.id_album WHERE a.album_id = '$id_album'");
+        $query = $this->db->query("SELECT a.id_foto, a.album_id, a.caption_foto, a.foto_gallery, b.id_album, b.nama_album FROM tbl_foto_gallery a LEFT JOIN tbl_album b ON a.album_id = b.id_album WHERE b.slug = '$slug'");
 
         if($query->num_rows() > 0)
         {
@@ -345,6 +359,65 @@ class Web extends CI_Model
             return NULL;
         }
     }
+
+       //total search galeri/album
+    function total_search_video($keyword)
+    {
+        $query = $this->db->like('judul_video',$keyword)->get('tbl_video');
+
+        if($query->num_rows() > 0)
+        {
+            return $query->num_rows();
+        }
+        else
+        {
+            return NULL;
+        }
+    }
+
+    //index search kategori
+    public function search_index_video($keyword,$limit,$offset)
+    {
+        $query = $this->db->select('*')
+            ->from('tbl_video')
+            ->limit($limit,$offset)
+            ->like('judul_video',$keyword)
+            ->limit($limit,$offset)
+            ->order_by('id_video','DESC')
+            ->get();
+
+        if($query->num_rows() > 0)
+        {
+            return $query;
+        }
+        else
+        {
+            return NULL;
+        }
+    }
+    
+    public function counter_visitor()
+    {
+        setcookie("pengunjung", "sudah berkunjung", time()+60*60*24);
+        if (!isset($_COOKIE["pengunjung"])) {
+            $d_in['ip_address'] = $_SERVER['REMOTE_ADDR'];
+            $d_in['date_visit'] = date("Y-m-d H:i:s");
+            $this->db->insert("tbl_counter",$d_in);
+        }
+    }
+    
+    function sitemap_berita()
+    {
+        $query  =   $this->db->order_by("id_berita","DESC")->get("tbl_berita");
+        return $query->result_array();
+    }
+
+    function sitemap_produk()
+    {
+        $query  =   $this->db->order_by("id_produk","DESC")->get("tbl_produk");
+        return $query->result_array();
+    }
+
 
 
 }

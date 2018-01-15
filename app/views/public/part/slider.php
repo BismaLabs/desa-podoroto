@@ -16,7 +16,7 @@
         </ul>
     </div>
 
-    <div class="blue-box">
+    <!-- <div class="blue-box">
 
 
         <div class="row-box">
@@ -39,6 +39,6 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
 
 </div>

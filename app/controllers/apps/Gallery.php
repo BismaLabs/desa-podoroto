@@ -156,6 +156,7 @@ class Gallery extends CI_Controller{
 
                 $insert = array(
                     'nama_album' => $this->input->post("nama_album"),
+                    'slug'       => url_title(strtolower($this->input->post("nama_album"))),
                     'updated_at' => date("Y-m-d H:i:s")
                 );
                 $this->db->insert("tbl_album", $insert);
@@ -170,6 +171,7 @@ class Gallery extends CI_Controller{
 
                 $update = array(
                     'nama_album' => $this->input->post("nama_album"),
+                    'slug'       => url_title(strtolower($this->input->post("nama_album"))),
                     'updated_at' => date("Y-m-d H:i:s")
                 );
                 $this->db->update("tbl_album", $update, $id);
@@ -251,6 +253,15 @@ class Gallery extends CI_Controller{
             {
                 mkdir($path.$folder,0777,TRUE);
                 $dir_exist = false;
+            }
+
+                        //create file
+            $pathtofile = './resources/foto_gallery/'.url_title(strtolower($query->nama_album));
+
+            if (!touch($pathtofile. '/index.html')) {
+                echo 'Opps!, kesalahan pada server sistem...';
+            } else {
+                //echo 'Success!, file berhasil dibuat.';
             }
 
             //config pagination

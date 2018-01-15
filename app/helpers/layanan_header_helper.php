@@ -12,7 +12,7 @@ if(!function_exists('layanan_header'))
     {
         $CI = & get_instance();
 
-        $query = $CI->db->select('*')->where('kategori', 'layanan')->order_by('judul_page' ,'ASC')->get('tbl_pages');
+        $query = $CI->db->select('*')->where('kategori', 'layanan')->order_by('id_page' ,'ASC')->get('tbl_pages');
 
         if($query->num_rows() < 0){
 

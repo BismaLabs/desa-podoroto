@@ -14,6 +14,8 @@ class Home extends CI_Controller
         parent::__construct();
         //load model
         $this->load->model('web');
+        //get visitor
+        //$this->web->counter_visitor();
     }
 
     public function index()
@@ -116,6 +118,7 @@ class Home extends CI_Controller
 
     function get_album()
     {
+        error_reporting(0);
         //declare page
         $page   =  $_GET['page'];
         //var articles define
@@ -123,12 +126,45 @@ class Home extends CI_Controller
         //loop
         foreach($album as $hasil){
 
+            $query = $this->db->query("SELECT foto_gallery FROM tbl_foto_gallery WHERE album_id = '$hasil->id_album' ORDER BY id_foto DESC LIMIT 1")->row();
+
+            if($query->foto_gallery == "")
+            {
+                $gambar = base_url().'resources/foto_gallery/album.png';
+            }else{
+                $gambar = base_url().'resources/foto_gallery/'.url_title(strtolower($hasil->nama_album)).'/'.$query->foto_gallery;
+            }
+
             echo '<div class="col-md-3">
-                    <img src="'.base_url().'resources/foto_gallery/album.png" alt="" style="object-fit: cover; width:100%; height:200px;">
+                    <img src="'.$gambar.'" alt="" style="object-fit: cover; width:100%; height:200px;max-height:200px;min-height:200px">
                     <div class="inner" style="padding:10px;background-color: #ffffff;-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);">
                         <div class="entry-header">
                             <h6 class="post-title entry-title wrap-berita">
-                               <a href="'.base_url().'galeri/foto/'.$this->encryption->encode($hasil->id_album).'" style="color:#4c4a45"> '. $hasil->nama_album .'</a>
+                               <a href="'.base_url().'galeri/foto/'.url_title(strtolower($hasil->nama_album)).'/" style="color:#4c4a45"> '. $hasil->nama_album .'</a>
+                            </h6>
+                        </div><!-- end entry-header -->
+                       
+                    </div><!-- end inner -->
+                </div>';
+        }
+        exit;
+    }
+
+    function get_video()
+    {
+        //declare page
+        $page   =  $_GET['page'];
+        //var articles define
+        $video = $this->web->get_video($page);
+        //loop
+        foreach($video as $hasil){
+
+            echo '<div class="col-md-6">
+                    <iframe style="width: 100%;height: 300px" src="'.$hasil->embed_youtube.'?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=1&autoplay=0" frameborder="0" allowfullscreen></iframe>
+                    <div class="inner" style="padding:10px;background-color: #ffffff;-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);">
+                        <div class="entry-header">
+                            <h6 class="post-title entry-title wrap-berita">
+                               <p style="color:#4c4a45"> '. $hasil->judul_video .'</p>
                             </h6>
                         </div><!-- end entry-header -->
                        

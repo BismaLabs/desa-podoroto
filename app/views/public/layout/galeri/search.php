@@ -23,10 +23,19 @@
             if($galeri!= NULL):
             foreach($galeri->result() as $hasil):
 
-                ?>
+                $query = $this->db->query("SELECT foto_gallery FROM tbl_foto_gallery WHERE album_id = '$hasil->id_album' ORDER BY id_foto DESC LIMIT 1")->row();
+
+                if($query->foto_gallery == "")
+                {
+                    $gambar = base_url().'resources/foto_gallery/album.png';
+                }else{
+                    $gambar = base_url().'resources/foto_gallery/'.url_title(strtolower($hasil->nama_album)).'/'.$query->foto_gallery;
+                }
+
+            ?>
 
                 <div class="col-md-3">
-                    <img src="<?php echo base_url() ?>resources/foto_gallery/album.png" alt="" style="object-fit: cover; width:100%; height:200px;">
+                    <img src="<?php echo $gambar ?>" alt="" style="object-fit: cover; width:100%; height:200px;max-height:200px;min-height:200px">
                     <div class="inner" style="padding:10px;background-color: #ffffff;-moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);">
                         <div class="entry-header">
                             <h6 class="post-title entry-title wrap-berita">

@@ -2,12 +2,6 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            <?php echo $title ?>
-            <small>Web Applications</small>
-        </h1>
-    </section>
 
     <!-- Main content -->
     <div class="content">
@@ -44,14 +38,14 @@
                                 <label>Jabatan</label>
                                 <input type="text" class="form-control" value="<?php echo $data_staff['jabatan'] ?>" name="jabatan" placeholder="Jabatan">
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label>No. Telephone</label>
                                 <input type="text" class="form-control" value="<?php echo $data_staff['telephone'] ?>" name="telephone" placeholder="No. Telephone">
                             </div>
                             <div class="form-group">
                                 <label>Alamat Email</label>
                                 <input type="email" class="form-control" value="<?php echo $data_staff['email'] ?>" name="email" placeholder="Alamat Email">
-                            </div>
+                            </div> -->
                             <div class="form-group">
                                 <label for="artilces">Alamat Rumah</label>
                                 <textarea class="form-control" id="post" name="alamat" rows="3" placeholder="Masukkan Alamat Rumah"><?php echo $data_staff['alamat'] ?></textarea>
